@@ -24,6 +24,8 @@ func change_cursor_state(to:CURSOR_STATES) -> void:
 	
 	_cursor_state = to
 	
+	#print("Cursor state is now ",CURSOR_STATES.find_key(to),"!")
+	
 	match _cursor_state:
 		CURSOR_STATES.NONE:
 			_on_none()

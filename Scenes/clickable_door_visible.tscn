@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bbv2dlmhe4odj"]
+
+[ext_resource type="Script" uid="uid://3vi3c0c2ddty" path="res://Scripts/clickable_door_node2D.gd" id="1_vp30y"]
+[ext_resource type="Texture2D" uid="uid://c28e21j0x471e" path="res://Images/object-sprites/door-closed-1.png" id="2_en5ai"]
+[ext_resource type="Texture2D" uid="uid://em71oi7rq1hw" path="res://Images/object-sprites/door-closed-2.png" id="3_n07oy"]
+[ext_resource type="Texture2D" uid="uid://oalrcxda8nt2" path="res://Images/object-sprites/door-closed-3.png" id="4_r3tsg"]
+[ext_resource type="Texture2D" uid="uid://dhkljjins7kjq" path="res://Images/object-sprites/door-closed-4.png" id="5_vcelq"]
+[ext_resource type="Texture2D" uid="uid://c42ls1yjjy8t1" path="res://Images/object-sprites/door.png" id="6_ld3ob"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqjpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_en5ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n07oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r3tsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vcelq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ld3ob")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 11.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_a3o7e"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a3o7e"]
+gradient = SubResource("Gradient_a3o7e")
+
+[node name="ClickableDoor_Node2D" type="Node2D" unique_id=1079640352]
+script = ExtResource("1_vp30y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=336602939]
+unique_name_in_owner = true
+position = Vector2(0, -43.376)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kqjpo")
+animation = &"open"
+
+[node name="ClickArea_Sprite2D" type="Sprite2D" parent="." unique_id=1119919461]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.9073486e-06, -32.999996)
+scale = Vector2(0.625, 1.2187499)
+texture = SubResource("GradientTexture2D_a3o7e")

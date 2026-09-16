@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 		get_local_mouse_position()
 	
 	var sprite_rect: Rect2 = _my_sprite().get_rect()
-	#print(self," has the sprite ",_sprite)
+	#print(self," has the sprite ",_my_sprite)
 	if sprite_rect.has_point(mouse_pos):
 		#print("HOVERING ",self," with sprite ",_my_sprite," with rect ",sprite_rect,
 		 #" with transform ",_my_sprite().transform)
@@ -42,5 +42,8 @@ func click(while_holding:HOLDABLES) -> void:
 
 
 func _on_clickable_hovered() -> void:
+	#print(self," knows something was hovered...")
 	if _hovered:
 		Cursor.ref.set_hovered_clickable(self)
+	#else:
+		#print(self," was not hovered...")

@@ -40,7 +40,6 @@ func _on_body_entered(
 body:PhysicsBody2D,
 zone:ZONES
 ) -> void:
-	print("SOMETHING HAPPENED")
 	if body is Player:
 		_change_zone(zone)
 

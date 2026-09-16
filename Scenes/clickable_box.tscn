@@ -11,13 +11,14 @@ load_path = "res://.godot/imported/Box1_Closed.png-16b76e8d72437029dc786c21b7964
 script = ExtResource("1_xshpr")
 
 [node name="Closed_Sprite2D" type="Sprite2D" parent="." unique_id=1260617751]
-position = Vector2(0, -16)
+position = Vector2(0, -7.806)
 texture = SubResource("CompressedTexture2D_1fuda")
 
 [node name="Open_Sprite2D" type="Sprite2D" parent="." unique_id=1725124372]
 unique_name_in_owner = true
 visible = false
-position = Vector2(0, -16)
+z_index = 4096
+position = Vector2(0, -7.806)
 texture = ExtResource("3_ykm2y")
 
 [node name="Key_Sprite2D" type="Sprite2D" parent="." unique_id=1788265007]

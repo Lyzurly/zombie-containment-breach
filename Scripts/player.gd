@@ -3,7 +3,7 @@ static var ref: Player
 func _init() -> void:
 	ref = self
 
-@onready var _debug_label: Label = $"../../Debug_Label"
+@onready var _debug_label: Label = %Debug_Label
 @onready var _sprite: AnimatedSprite2D = %AnimatedSprite2D
 
 var _holding: Clickable.HOLDABLES = Clickable.HOLDABLES.NOTHING

@@ -76,3 +76,14 @@ frame_progress = 0.38962543
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1108627336]
 position = Vector2(-2, 30)
 shape = SubResource("RectangleShape2D_6ks7b")
+
+[node name="Debug_Label" type="Label" parent="." unique_id=1278566042]
+unique_name_in_owner = true
+visible = false
+offset_left = -264.0
+offset_top = -213.0
+offset_right = -155.0
+offset_bottom = -168.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 32
+text = "DEBUG"

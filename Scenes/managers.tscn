@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3qpg22o5gsb0"]
 
 [ext_resource type="Script" uid="uid://dmy8tspteegf2" path="res://Scripts/manage_game.gd" id="1_7yvbx"]
+[ext_resource type="Script" uid="uid://cp1swkpja7x38" path="res://Scripts/manage_room.gd" id="2_cvis2"]
 [ext_resource type="Script" uid="uid://sbklwsg3p7ag" path="res://Scripts/camera_zones_node2d.gd" id="2_nrf46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yvbx"]
@@ -16,6 +17,7 @@ process_mode = 3
 script = ExtResource("1_7yvbx")
 
 [node name="ManageRoom" type="Node" parent="." unique_id=809921546]
+script = ExtResource("2_cvis2")
 
 [node name="Camera_Zones_Node2D" type="Node2D" parent="ManageRoom" unique_id=1002087427]
 script = ExtResource("2_nrf46")
