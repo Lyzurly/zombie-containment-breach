@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dka51t753elcx"]
+
+[ext_resource type="Texture2D" uid="uid://dfh7ilg5diak6" path="res://Images/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/1 Tiles/IndustrialTile_41.png" id="1_4uyro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf3ok"]
+size = Vector2(16, 16)
+
+[node name="Tile_Bottom_Node2D" type="Node2D" unique_id=1692394480]
+
+[node name="Tile_Bottom_Sprite2D" type="Sprite2D" parent="." unique_id=891238145]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4uyro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1459196870]
+shape = SubResource("RectangleShape2D_mf3ok")

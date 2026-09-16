@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://buwxfc8mko6mc"]
+
+[ext_resource type="Script" uid="uid://c0fcfmh5gw4no" path="res://Scripts/cursor_node2d.gd" id="1_0cwaf"]
+[ext_resource type="Texture2D" uid="uid://cgj2dcd3dagmp" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_00.png" id="1_0vr6q"]
+[ext_resource type="Texture2D" uid="uid://c428fp8apamiu" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_01.png" id="2_0cwaf"]
+[ext_resource type="Texture2D" uid="uid://07csbt7b7an0" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_02.png" id="3_088ab"]
+[ext_resource type="Texture2D" uid="uid://b7cn44a5ys45k" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_03.png" id="4_20ghn"]
+[ext_resource type="Texture2D" uid="uid://bl5vox3l14h2r" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_04.png" id="5_lpehl"]
+[ext_resource type="Texture2D" uid="uid://du6ln0wkm6epy" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_05.png" id="6_xrvxj"]
+[ext_resource type="Texture2D" uid="uid://b2pyqdmdwf4jn" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_06.png" id="7_anmyf"]
+[ext_resource type="Texture2D" uid="uid://h7f7gt77bmj5" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_07.png" id="8_sxl7m"]
+[ext_resource type="Texture2D" uid="uid://bg4qih2oqig1r" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_08.png" id="9_ck41s"]
+[ext_resource type="Texture2D" uid="uid://bdx4ovcwjeyug" path="res://Images/cursor-sprites/Animated Tutorial Cursor-Tap_09.png" id="10_km2nv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqjpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0vr6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0cwaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_088ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_20ghn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lpehl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xrvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_anmyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sxl7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ck41s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_km2nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0vr6q")
+}],
+"loop": 0,
+"name": &"click",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0vr6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0cwaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_088ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_20ghn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lpehl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xrvxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_anmyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sxl7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ck41s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_km2nv")
+}],
+"loop": 1,
+"name": &"click_loop",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0vr6q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Cursor_Node2D" type="Node2D" unique_id=1383535473]
+script = ExtResource("1_0cwaf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=300141234]
+unique_name_in_owner = true
+z_index = 4096
+scale = Vector2(0.206, 0.206)
+sprite_frames = SubResource("SpriteFrames_kqjpo")
+animation = &"click"

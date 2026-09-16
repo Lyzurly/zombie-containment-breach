@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bbmckqtae33aa"]
+
+[ext_resource type="Script" uid="uid://cawfefe76bwet" path="res://Scripts/clickable_box.gd" id="1_xshpr"]
+[ext_resource type="Texture2D" uid="uid://2ej3hkv6st24" path="res://Images/key.png" id="3_spxdl"]
+[ext_resource type="Texture2D" uid="uid://cg6utdwm42n1m" path="res://Images/object-sprites/Box1_Open.png" id="3_ykm2y"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1fuda"]
+load_path = "res://.godot/imported/Box1_Closed.png-16b76e8d72437029dc786c21b7964369.ctex"
+
+[node name="Clickable_Box" type="Node2D" unique_id=773714240]
+script = ExtResource("1_xshpr")
+
+[node name="Closed_Sprite2D" type="Sprite2D" parent="." unique_id=1260617751]
+position = Vector2(0, -16)
+texture = SubResource("CompressedTexture2D_1fuda")
+
+[node name="Open_Sprite2D" type="Sprite2D" parent="." unique_id=1725124372]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -16)
+texture = ExtResource("3_ykm2y")
+
+[node name="Key_Sprite2D" type="Sprite2D" parent="." unique_id=1788265007]
+unique_name_in_owner = true
+visible = false
+z_index = 4096
+position = Vector2(0, -90)
+scale = Vector2(2.486, 2.486)
+texture = ExtResource("3_spxdl")
