@@ -49,6 +49,6 @@ animation = &"open"
 
 [node name="ClickArea_Sprite2D" type="Sprite2D" parent="." unique_id=1119919461]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
+visible = false
 position = Vector2(0, -34.444)
 texture = SubResource("GradientTexture2D_a3o7e")

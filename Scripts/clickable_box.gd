@@ -1,4 +1,4 @@
-class_name Clickable_Box extends Clickable
+class_name Clickable_Box extends Room_Object
 
 @onready var _closed_sprite: Sprite2D = $Closed_Sprite2D
 @onready var _open_sprite: Sprite2D = %Open_Sprite2D
@@ -16,6 +16,9 @@ _while_holding:HOLDABLES
 	if click_count == 1:
 		_closed_sprite.hide()
 		_open_sprite.show()
+		action_complete()
+		
+		return
 		var coin_flip: float = randf_range(-1,1.1)
 		if coin_flip <= 0:
 			_key_sprite.visible = true
@@ -24,3 +27,9 @@ _while_holding:HOLDABLES
 			Win_Label.ref.visible = true
 			#await get_tree().create_timer(5.)
 			#get_tree().reload_current_scene()
+
+func _on_reset():
+	pass
+	
+func action_complete() -> void:
+	Cursor.ref.cursor_action_complete()

@@ -4,6 +4,7 @@
 @abstract func _on_click(
 clicks:int,while_holding:HOLDABLES
 ) -> void
+@abstract func action_complete() -> void
 
 enum HOLDABLES{
 	NOTHING,KEY1
@@ -16,6 +17,14 @@ func _ready() -> void:
 	Cursor.ref.clickable_hovered.connect(_on_clickable_hovered)
 	
 func _physics_process(_delta: float) -> void:
+	if self is Room_Object:
+		var object: Room_Object = self as Room_Object
+		
+		if object.can_hover() \
+		and Cursor.ref.is_active():
+			_physics_process_handle_hover()
+
+func _physics_process_handle_hover() -> void:
 	var mouse_pos: Vector2 = \
 		get_local_mouse_position()
 	
@@ -37,8 +46,11 @@ func _physics_process(_delta: float) -> void:
 		
 
 func click(while_holding:HOLDABLES) -> void:
+	if not Cursor.ref.is_active():
+		return
 	_click_count += 1
 	_on_click(_click_count,while_holding)
+	
 
 
 func _on_clickable_hovered() -> void:
