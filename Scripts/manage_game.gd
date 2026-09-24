@@ -54,4 +54,6 @@ func _check_gameplay() -> bool:
 	return true
 func _on_gameplay() -> void:
 	Level.ref.add_player()
+	await get_tree().process_frame
+	Manage_Room.ref.spawn_monster()
 		

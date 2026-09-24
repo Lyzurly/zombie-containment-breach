@@ -6,13 +6,14 @@ func _init() -> void:
 signal door_opened(which_door: Door, id:int)
 signal reset_room(which_room: Level_Room)
 
+const _MONSTER: PackedScene = preload("uid://dgsxvuatjaxvo")
 
 var _last_room: Level_Room
 var _next_room: Level_Room
 	
 func _ready() -> void:
 	Level.ref.level_faded.connect(_on_level_faded)
-	
+
 func set_first_last_room(to:Level_Room) -> void:
 	_last_room = to
 	
@@ -25,7 +26,17 @@ indeed:bool
 	Level.ref.darken(by_what,indeed)
 	if indeed:
 		pass
-	
+
+func spawn_monster() -> void:
+	if not _last_room:
+		push_error("NO MONSTA IF NO ROOM HAHA")
+		return
+		
+	var monster: Monster = \
+		_MONSTER.instantiate() as Monster
+	_last_room.add_child(monster)
+	monster.move_to_spawn_pos()
+
 func _on_level_faded() -> void:
 	if not _next_room:
 		push_error(

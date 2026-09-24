@@ -60,20 +60,20 @@ size = Vector2(26, 69)
 
 [node name="Player" type="Node2D" unique_id=502544076]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1411004247]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1411004247]
 position = Vector2(0, -65)
 collision_layer = 2
 script = ExtResource("1_6t5aa")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1755679763]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1755679763]
 unique_name_in_owner = true
 position = Vector2(-1.486, 10.832)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_kqjpo")
 animation = &"walk"
-frame_progress = 0.79669863
+frame_progress = 0.70632267
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1108627336]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1108627336]
 position = Vector2(-2, 30)
 shape = SubResource("RectangleShape2D_6ks7b")
 

@@ -21,6 +21,8 @@ func _ready() -> void:
 
 func is_zone(which:ZONES) -> bool:
 	return which == _current_zone
+func get_current_zone() -> ZONES:
+	return _current_zone
 
 func _change_zone(to:ZONES) -> void:
 	if _current_zone == to:

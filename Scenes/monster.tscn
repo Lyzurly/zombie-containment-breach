@@ -238,11 +238,10 @@ collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=235114857]
 unique_name_in_owner = true
-position = Vector2(0, -46.999992)
-scale = Vector2(0.286, 0.286)
+scale = Vector2(0.17, 0.17)
 sprite_frames = SubResource("SpriteFrames_y7hum")
 animation = &"run"
-frame_progress = 0.7684088
+frame_progress = 0.9512566
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1121277064]
 position = Vector2(-6.5, -1)

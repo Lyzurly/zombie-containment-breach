@@ -9,9 +9,9 @@ func _init() -> void:
 var _holding: Clickable.HOLDABLES = Clickable.HOLDABLES.NOTHING
 var _clickable_to_activate: Clickable
 
-var _move_state: MOVE_STATES = MOVE_STATES.IDLE
+var _move_state: MOVE_STATES = MOVE_STATES.NONE
 enum MOVE_STATES{
-	IDLE,WALK_LEFT,WALK_RIGHT
+	NONE,IDLE,WALK_LEFT,WALK_RIGHT
 	}
 	
 var _dir_state: DIR_STATES = DIR_STATES.NONE
