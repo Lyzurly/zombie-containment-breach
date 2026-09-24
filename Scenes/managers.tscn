@@ -3,12 +3,37 @@
 [ext_resource type="Script" uid="uid://dmy8tspteegf2" path="res://Scripts/manage_game.gd" id="1_7yvbx"]
 [ext_resource type="Script" uid="uid://cp1swkpja7x38" path="res://Scripts/manage_room.gd" id="2_cvis2"]
 [ext_resource type="Script" uid="uid://sbklwsg3p7ag" path="res://Scripts/camera_zones_node2d.gd" id="2_nrf46"]
+[ext_resource type="Script" uid="uid://csuf7xu1n6mpg" path="res://Scripts/manage_hud.gd" id="4_0gsl3"]
+[ext_resource type="Texture2D" uid="uid://bp74xk10imsy7" path="res://icon.svg" id="5_j5fya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yvbx"]
 size = Vector2(420, 350)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrf46"]
 size = Vector2(750, 350)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gsl3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5fya"]
+bg_color = Color(0.43797117, 0.50195205, 0.5318563, 0.46666667)
+border_width_left = 6
+border_width_bottom = 7
+border_color = Color(0.21, 0.1302, 0.17808004, 0)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="FontVariation" id="FontVariation_kqjpo"]
+variation_embolden = 0.69
+variation_transform = Transform2D(0.954, 0.36, 0.088, 1, 0, 0)
+spacing_top = -8
 
 [node name="Managers" type="Node" unique_id=1565604489]
 
@@ -48,3 +73,130 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ManageRoom/Camera_Zones_Node2D/Room_Right_Area2D" unique_id=934183148]
 shape = SubResource("RectangleShape2D_7yvbx")
+
+[node name="ManageHUD" type="Node" parent="." unique_id=1174964658]
+script = ExtResource("4_0gsl3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ManageHUD" unique_id=1347492204]
+
+[node name="HUD_MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer" unique_id=1640144953]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer" unique_id=1049863083]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer" unique_id=1630611219]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer" unique_id=363188045]
+layout_mode = 2
+split_offsets = PackedInt32Array(-62, -272)
+split_offset = -62
+
+[node name="Placeholder_MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer" unique_id=573982611]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 5
+
+[node name="Placeholder_Label1" type="Label" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/Placeholder_MarginContainer" unique_id=857330454]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gsl3")
+text = "LEFT SIDE"
+
+[node name="Placeholder_MarginContainer2" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer" unique_id=49975981]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 5
+
+[node name="Placeholder_Label2" type="Label" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/Placeholder_MarginContainer2" unique_id=293512802]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gsl3")
+text = "MIDDLE"
+horizontal_alignment = 1
+
+[node name="RobotSuit_PanelContainer" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer" unique_id=1981597805]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5fya")
+
+[node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer" unique_id=397390968]
+layout_mode = 2
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_bottom = 14
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer" unique_id=1320913793]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer" unique_id=1949575693]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = -19
+
+[node name="RobotSuit_Label" type="Label" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1526018204]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6431373, 0.80784315, 0.80784315, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
+theme_override_fonts/font = SubResource("FontVariation_kqjpo")
+theme_override_font_sizes/font_size = 23
+text = "Robot Suit Progress"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer" unique_id=606429300]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 20
+
+[node name="RobotParts_HFlowContainer" type="HFlowContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=666945525]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=719431778]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5fya")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=2040496036]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5fya")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=426458388]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5fya")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1931412474]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5fya")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1499695162]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5fya")
+expand_mode = 4
+stretch_mode = 4
