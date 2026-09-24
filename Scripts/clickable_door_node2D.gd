@@ -33,6 +33,7 @@ func _on_door_opened(door: Door, id:int) -> void:
 		print("DOOR PARENT IS ",parent)
 		if parent is Level_Room:
 			Manage_Room.ref.change_room(door,parent,true)
+			Manage_Room.ref.set_last_door(self)
 			
 	#else:
 		#push_error(

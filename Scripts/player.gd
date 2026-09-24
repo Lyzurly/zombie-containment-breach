@@ -24,8 +24,14 @@ const JUMP_VELOCITY = -600.0
 
 func _ready() -> void:
 	print("PLAYER READY")
-	_change_move_state(MOVE_STATES.IDLE)
+	_ready_connections()
+	_ready_initial_states()
+	
+func _ready_connections() -> void:
+	Manage_Room.ref.reset_room.connect(_on_reset_room)
 
+func _ready_initial_states() -> void:
+	_change_move_state(MOVE_STATES.IDLE)
 
 func _is_dir_state(which:DIR_STATES) -> bool:
 	return which == _dir_state
@@ -173,3 +179,14 @@ func _on_walk_left() -> void:
 	_sprite.flip_h = true
 func _on_walk_right() -> void:
 	_sprite.flip_h = false
+
+func _on_reset_room(_which_room:Level_Room) -> void:
+	# Layer 3 = Player Camera Zone Detection
+	set_collision_layer_value(3,false)
+	var door: Clickable = \
+		Manage_Room.ref.get_last_door()
+	print("HERE DA DOOR ",door)
+	global_position.x = door.global_position.x
+	# Layer 3 = Player Camera Zone Detection
+	await get_tree().process_frame
+	set_collision_layer_value(3,true)

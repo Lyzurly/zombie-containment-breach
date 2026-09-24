@@ -19,7 +19,7 @@ func _ready() -> void:
 func add_player() -> void:
 	var player: Node2D = \
 		_PLAYER.instantiate()
-	get_parent().add_child.call_deferred(player)
+	add_child.call_deferred(player)
 	player.global_position = _PLAYER_SPAWN_POS
 
 func darken(by_what:Clickable,indeed:bool) -> void:

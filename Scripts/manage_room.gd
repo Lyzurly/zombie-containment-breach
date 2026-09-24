@@ -10,6 +10,8 @@ const _MONSTER: PackedScene = preload("uid://dgsxvuatjaxvo")
 
 var _last_room: Level_Room
 var _next_room: Level_Room
+
+var _last_door: Clickable
 	
 func _ready() -> void:
 	Level.ref.level_faded.connect(_on_level_faded)
@@ -26,6 +28,14 @@ indeed:bool
 	Level.ref.darken(by_what,indeed)
 	if indeed:
 		pass
+		
+func set_last_door(which_door:Clickable) -> void:
+	_last_door = which_door
+func get_last_door() -> Clickable:
+	if not _last_door:
+		push_error(
+			"ASKIN FOR A DOOR THAT AINT THERE GIRL")
+	return _last_door
 
 func spawn_monster() -> void:
 	if not _last_room:

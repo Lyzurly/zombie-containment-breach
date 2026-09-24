@@ -12,6 +12,7 @@ enum ZONES{NONE,MID,LEFT,RIGHT,TOP}
 
 func _ready() -> void:
 	print("AREAS READY")
+	Manage_Room.ref.reset_room.connect(_on_reset_room)
 	_left_area.body_entered.connect(
 		_on_body_entered.bind(ZONES.LEFT))
 	_mid_area.body_entered.connect(
@@ -55,3 +56,6 @@ func _on_left_zone() -> void:
 
 func _on_right_zone() -> void:
 	Camera.ref.move(ZONES.RIGHT)
+
+func _on_reset_room(_which_room:Level_Room) -> void:
+	_change_zone(ZONES.NONE)

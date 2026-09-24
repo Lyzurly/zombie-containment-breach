@@ -26,7 +26,7 @@ script = ExtResource("2_nrf46")
 unique_name_in_owner = true
 position = Vector2(-597, -177)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ManageRoom/Camera_Zones_Node2D/Room_Left_Area2D" unique_id=1862153968]
 shape = SubResource("RectangleShape2D_7yvbx")
@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_7yvbx")
 unique_name_in_owner = true
 position = Vector2(0, -177)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ManageRoom/Camera_Zones_Node2D/Room_Mid_Area2D" unique_id=407981547]
 shape = SubResource("RectangleShape2D_nrf46")
@@ -44,7 +44,7 @@ shape = SubResource("RectangleShape2D_nrf46")
 unique_name_in_owner = true
 position = Vector2(597, -177)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ManageRoom/Camera_Zones_Node2D/Room_Right_Area2D" unique_id=934183148]
 shape = SubResource("RectangleShape2D_7yvbx")

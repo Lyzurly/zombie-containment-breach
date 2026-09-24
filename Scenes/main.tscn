@@ -119,7 +119,7 @@ scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("19_ueoa1")
 
 [node name="ClickableDoor_Node2D3" parent="Level/TileMap/Room2" unique_id=650980233 instance=ExtResource("8_6iyac")]
-position = Vector2(8.571429, -47.619045)
+position = Vector2(-280.9524, -47.619045)
 scale = Vector2(1.0000001, 1.0000001)
 _door_id = 1
 
