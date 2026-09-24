@@ -5,10 +5,22 @@ func _init() -> void:
 	
 signal level_faded
 	
+const _PLAYER: PackedScene = preload("uid://bl3lborhje03c")
+const _PLAYER_SPAWN_POS: Vector2 = Vector2(-255,0)
+
 const _FADE_SPEED: float = .5
 const _FADE_OUT_DELAY: float = .7
 var _tween: Tween
 
+func _ready() -> void:
+	Manage_Game.ref.change_game_state(
+		Manage_Game.GAME_STATES.GAMEPLAY) 
+
+func add_player() -> void:
+	var player: Node2D = \
+		_PLAYER.instantiate()
+	get_parent().add_child.call_deferred(player)
+	player.global_position = _PLAYER_SPAWN_POS
 
 func darken(by_what:Clickable,indeed:bool) -> void:
 	if _tween:

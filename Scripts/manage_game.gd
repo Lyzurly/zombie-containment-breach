@@ -2,14 +2,14 @@ class_name Manage_Game extends Node
 static var ref: Manage_Game
 func _init() -> void:
 	ref = self
-
+	
 var _game_state: GAME_STATES = GAME_STATES.NONE
 enum GAME_STATES{
 	NONE,CINEMATIC,GAMEPLAY
 	}
 	
 func _ready() -> void:
-	change_game_state(GAME_STATES.GAMEPLAY) 
+	pass
 	
 func is_state(which:GAME_STATES) -> bool:
 	return which == _game_state
@@ -53,4 +53,5 @@ func _on_cinematic() -> void:
 func _check_gameplay() -> bool:
 	return true
 func _on_gameplay() -> void:
-	pass
+	Level.ref.add_player()
+		

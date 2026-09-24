@@ -23,6 +23,7 @@ var SPEED = 75.0
 const JUMP_VELOCITY = -600.0
 
 func _ready() -> void:
+	print("PLAYER READY")
 	_change_move_state(MOVE_STATES.IDLE)
 
 

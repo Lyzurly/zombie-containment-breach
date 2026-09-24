@@ -23,7 +23,6 @@ _while_holding:HOLDABLES
 		if coin_flip <= 0:
 			_key_sprite.visible = true
 			
-			#Monster.ref.queue_free()
 			Win_Label.ref.visible = true
 			#await get_tree().create_timer(5.)
 			#get_tree().reload_current_scene()

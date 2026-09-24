@@ -3,14 +3,15 @@ static var ref: Camera_Zones
 func _init() -> void:
 	ref = self
 
-var _current_zone: ZONES = ZONES.MID
-enum ZONES{MID,LEFT,RIGHT,TOP}
+var _current_zone: ZONES = ZONES.NONE
+enum ZONES{NONE,MID,LEFT,RIGHT,TOP}
 
 @onready var _left_area: Area2D = %Room_Left_Area2D
 @onready var _mid_area: Area2D = %Room_Mid_Area2D
 @onready var _right_area: Area2D = %Room_Right_Area2D
 
 func _ready() -> void:
+	print("AREAS READY")
 	_left_area.body_entered.connect(
 		_on_body_entered.bind(ZONES.LEFT))
 	_mid_area.body_entered.connect(
@@ -26,6 +27,7 @@ func _change_zone(to:ZONES) -> void:
 		return
 	
 	_current_zone = to
+	print("Player is in area ",ZONES.find_key(_current_zone))
 	
 	match to:
 		ZONES.MID:
