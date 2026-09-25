@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://cp1swkpja7x38" path="res://Scripts/manage_room.gd" id="2_cvis2"]
 [ext_resource type="Script" uid="uid://sbklwsg3p7ag" path="res://Scripts/camera_zones_node2d.gd" id="2_nrf46"]
 [ext_resource type="Script" uid="uid://csuf7xu1n6mpg" path="res://Scripts/manage_hud.gd" id="4_0gsl3"]
-[ext_resource type="Texture2D" uid="uid://bp74xk10imsy7" path="res://icon.svg" id="5_j5fya"]
+[ext_resource type="Texture2D" uid="uid://cjm0ewlq68qxg" path="res://Images/player-sprites/robot/foot.png" id="5_03yhr"]
+[ext_resource type="Texture2D" uid="uid://df1jbh42u1me2" path="res://Images/player-sprites/robot/arm.png" id="6_ol107"]
+[ext_resource type="Texture2D" uid="uid://iju1w7dhjn7a" path="res://Images/player-sprites/robot/body.png" id="7_ab8ev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yvbx"]
 size = Vector2(420, 350)
@@ -166,37 +168,38 @@ size_flags_vertical = 4
 theme_override_constants/h_separation = 12
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=719431778]
+[node name="PartLeg1_TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1931412474]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_j5fya")
+texture = ExtResource("5_03yhr")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="TextureRect5" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=2040496036]
+[node name="PartArm1_TextureRect" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=719431778]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_j5fya")
+texture = ExtResource("6_ol107")
+expand_mode = 4
+stretch_mode = 4
+flip_h = true
+
+[node name="PartBody_TextureRect4" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=426458388]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_ab8ev")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="TextureRect4" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=426458388]
+[node name="PartArm2_TextureRect5" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=2040496036]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_j5fya")
+texture = ExtResource("6_ol107")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1931412474]
+[node name="PartLeg2_TextureRect3" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1499695162]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_j5fya")
-expand_mode = 4
-stretch_mode = 4
-
-[node name="TextureRect3" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1499695162]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("5_j5fya")
+texture = ExtResource("5_03yhr")
 expand_mode = 4
 stretch_mode = 4
