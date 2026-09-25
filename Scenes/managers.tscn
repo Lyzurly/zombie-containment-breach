@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cjm0ewlq68qxg" path="res://Images/player-sprites/robot/foot.png" id="5_03yhr"]
 [ext_resource type="Texture2D" uid="uid://df1jbh42u1me2" path="res://Images/player-sprites/robot/arm.png" id="6_ol107"]
 [ext_resource type="Texture2D" uid="uid://iju1w7dhjn7a" path="res://Images/player-sprites/robot/body.png" id="7_ab8ev"]
+[ext_resource type="Texture2D" uid="uid://b1x364pmu5dkv" path="res://Images/player-sprites/robot/parts_lines.png" id="8_ol107"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yvbx"]
 size = Vector2(420, 350)
@@ -23,7 +24,7 @@ border_width_bottom = 10
 border_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5fya"]
-bg_color = Color(0.43797117, 0.50195205, 0.5318563, 0.46666667)
+bg_color = Color(0, 0, 0, 0)
 border_width_left = 6
 border_width_bottom = 7
 border_color = Color(0.21, 0.1302, 0.17808004, 0)
@@ -36,6 +37,23 @@ corner_detail = 20
 variation_embolden = 0.69
 variation_transform = Transform2D(0.954, 0.36, 0.088, 1, 0, 0)
 spacing_top = -8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqjpo"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.98, 0.4998, 0.61985, 0.74509805)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.21568628, 0.26666668, 0.43137255, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
 
 [node name="Managers" type="Node" unique_id=1565604489]
 
@@ -94,11 +112,12 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer" unique_id=1630611219]
 layout_mode = 2
+size_flags_vertical = 2
 
 [node name="HSplitContainer" type="HSplitContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer" unique_id=363188045]
 layout_mode = 2
-split_offsets = PackedInt32Array(-62, -272)
-split_offset = -62
+split_offsets = PackedInt32Array(-10, -461)
+split_offset = -10
 
 [node name="Placeholder_MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer" unique_id=573982611]
 layout_mode = 2
@@ -128,28 +147,31 @@ horizontal_alignment = 1
 
 [node name="RobotSuit_PanelContainer" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer" unique_id=1981597805]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.716, 0.716)
+offset_transform_pivot_ratio = Vector2(0.834, 0.248)
 theme_override_styles/panel = SubResource("StyleBoxFlat_j5fya")
 
 [node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer" unique_id=397390968]
 layout_mode = 2
-theme_override_constants/margin_top = 13
-theme_override_constants/margin_bottom = 14
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = -113
+theme_override_constants/margin_bottom = 33
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer" unique_id=1320913793]
+[node name="VBoxContainer" type="VBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer" unique_id=302533968]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 7
 alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer" unique_id=1949575693]
+[node name="MarginContainer2" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer" unique_id=1949575693]
 layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_right = -19
 
-[node name="RobotSuit_Label" type="Label" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1526018204]
+[node name="RobotSuit_Label" type="Label" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1526018204]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.6431373, 0.80784315, 0.80784315, 1)
+theme_override_colors/font_color = Color(0.8, 1, 1, 0.7529412)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
 theme_override_fonts/font = SubResource("FontVariation_kqjpo")
 theme_override_font_sizes/font_size = 23
@@ -157,49 +179,117 @@ text = "Robot Suit Progress"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer" unique_id=606429300]
+[node name="MarginContainer" type="MarginContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer" unique_id=606429300]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_right = 20
+offset_transform_enabled = true
 
-[node name="RobotParts_HFlowContainer" type="HFlowContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=666945525]
+[node name="VBoxContainer" type="VBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1721727173]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RobotParts1_HBoxContainer" type="HBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=932729503]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/h_separation = 12
 alignment = 1
 
-[node name="PartLeg1_TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1931412474]
+[node name="PanelContainer" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer" unique_id=524638771]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_03yhr")
-expand_mode = 4
-stretch_mode = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 15)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqjpo")
 
-[node name="PartArm1_TextureRect" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=719431778]
+[node name="PartArm1_TextureRect" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer/PanelContainer" unique_id=719431778]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 3.124)
+offset_transform_scale = Vector2(0.838, 0.838)
 texture = ExtResource("6_ol107")
 expand_mode = 4
 stretch_mode = 4
 flip_h = true
 
-[node name="PartBody_TextureRect4" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=426458388]
+[node name="PanelContainer3" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer" unique_id=998070970]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqjpo")
+
+[node name="PartBody_TextureRect4" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer/PanelContainer3" unique_id=426458388]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("7_ab8ev")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="PartArm2_TextureRect5" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=2040496036]
+[node name="PanelContainer2" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer" unique_id=1606405643]
 layout_mode = 2
 size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 15)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqjpo")
+
+[node name="PartArm2_TextureRect5" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts1_HBoxContainer/PanelContainer2" unique_id=2040496036]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 3.124)
+offset_transform_scale = Vector2(0.838, 0.838)
 texture = ExtResource("6_ol107")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="PartLeg2_TextureRect3" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/HBoxContainer/MarginContainer/RobotParts_HFlowContainer" unique_id=1499695162]
+[node name="RobotParts2_HBoxContainer" type="HBoxContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1045514133]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer" unique_id=1366080791]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(47, 15)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqjpo")
+
+[node name="PartLeg1_TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer/PanelContainer" unique_id=1931412474]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.842, 0.842)
+offset_transform_rotation = 0.22514747
 texture = ExtResource("5_03yhr")
-expand_mode = 4
+stretch_mode = 4
+
+[node name="Placeholder_PanelContainer3" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer" unique_id=1139742225]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Placeholder_PartLeg1_TextureRect2" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer/Placeholder_PanelContainer3" unique_id=791626637]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -40)
+texture = ExtResource("8_ol107")
+stretch_mode = 4
+
+[node name="PanelContainer2" type="PanelContainer" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer" unique_id=1016593634]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-47, 15)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kqjpo")
+
+[node name="PartLeg2_TextureRect3" type="TextureRect" parent="ManageHUD/CanvasLayer/HUD_MarginContainer/VBoxContainer/MarginContainer/HSplitContainer/RobotSuit_PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RobotParts2_HBoxContainer/PanelContainer2" unique_id=1499695162]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.842, 0.842)
+offset_transform_rotation = 0.22514747
+texture = ExtResource("5_03yhr")
 stretch_mode = 4
