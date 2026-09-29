@@ -63,15 +63,6 @@ position = Vector2(0, -210)
 scale = Vector2(1.3333335, 1.3333335)
 texture = ExtResource("3_21xkr")
 
-[node name="Clickable_Box" parent="Level/TileMap/Room1" unique_id=773714240 instance=ExtResource("10_hptm8")]
-position = Vector2(114.28572, -56.190475)
-
-[node name="Clickable_Box2" parent="Level/TileMap/Room1" unique_id=1302423993 instance=ExtResource("10_hptm8")]
-position = Vector2(-154.28572, -56.190475)
-
-[node name="Clickable_Box3" parent="Level/TileMap/Room1" unique_id=1603994718 instance=ExtResource("10_hptm8")]
-position = Vector2(258.09525, -56.190475)
-
 [node name="ClickableDoor_Node2D2" parent="Level/TileMap/Room1" unique_id=1079640352 instance=ExtResource("8_6iyac")]
 position = Vector2(8.571429, -47.619045)
 _door_id = 1
@@ -83,36 +74,36 @@ tile_map_data = PackedByteArray("AADo//3/AAAAAAAAAwDp//3/AAAAAAAAAwDq//3/AAAAAAA
 tile_set = SubResource("TileSet_kqjpo")
 script = ExtResource("13_k12tt")
 
-[node name="Node2D" type="Node2D" parent="Level/TileMap/Room2" unique_id=604546567]
+[node name="BG" type="Node2D" parent="Level/TileMap/Room2" unique_id=604546567]
 modulate = Color(0.8, 0.8, 0.8, 1)
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="BG_Sprite2D" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=1728353322]
+[node name="BG_Sprite2D" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=1728353322]
 position = Vector2(0, -248.57152)
 scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("14_gt3je")
 
-[node name="BG_Sprite2D2" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=1724299902]
+[node name="BG_Sprite2D2" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=1724299902]
 position = Vector2(0, -293.45352)
 scale = Vector2(1.5113001, 1.5113001)
 texture = ExtResource("15_3pmx8")
 
-[node name="BG_Sprite2D3" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=1768740161]
+[node name="BG_Sprite2D3" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=1768740161]
 position = Vector2(0, -276.2975)
 scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("16_u50mg")
 
-[node name="BG_Sprite2D4" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=1159724407]
+[node name="BG_Sprite2D4" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=1159724407]
 position = Vector2(0, -248.57152)
 scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("17_cbgmd")
 
-[node name="BG_Sprite2D5" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=348949234]
+[node name="BG_Sprite2D5" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=348949234]
 position = Vector2(0, -248.57152)
 scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("18_1w6v2")
 
-[node name="BG_Sprite2D6" type="Sprite2D" parent="Level/TileMap/Room2/Node2D" unique_id=234308739]
+[node name="BG_Sprite2D6" type="Sprite2D" parent="Level/TileMap/Room2/BG" unique_id=234308739]
 z_index = 1000
 position = Vector2(0, -263.80957)
 scale = Vector2(1.3333337, 1.3333337)
@@ -122,6 +113,30 @@ texture = ExtResource("19_ueoa1")
 position = Vector2(-280.9524, -47.619045)
 scale = Vector2(1.0000001, 1.0000001)
 _door_id = 1
+
+[node name="Clickable_Box" parent="Level/TileMap/Room2" unique_id=773714240 instance=ExtResource("10_hptm8")]
+position = Vector2(114.28572, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box2" parent="Level/TileMap/Room2" unique_id=1302423993 instance=ExtResource("10_hptm8")]
+position = Vector2(-154.28572, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box3" parent="Level/TileMap/Room2" unique_id=1603994718 instance=ExtResource("10_hptm8")]
+position = Vector2(258.09528, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box4" parent="Level/TileMap/Room2" unique_id=1670602684 instance=ExtResource("10_hptm8")]
+position = Vector2(-24.285736, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box5" parent="Level/TileMap/Room2" unique_id=618081848 instance=ExtResource("10_hptm8")]
+position = Vector2(331.9048, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box6" parent="Level/TileMap/Room2" unique_id=1383326619 instance=ExtResource("10_hptm8")]
+position = Vector2(-342.85718, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Win_Label" type="Label" parent="Level" unique_id=504230731]
 process_mode = 3

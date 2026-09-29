@@ -9,6 +9,9 @@ func _my_sprite() -> Sprite2D:
 	#print(self," reports it having the sprite ",$Closed_Sprite2D)
 	return $Closed_Sprite2D
 
+func _can_spawn_robot_part() -> bool:
+	return true
+
 func _on_click(
 click_count:int,
 _while_holding:HOLDABLES
@@ -17,6 +20,7 @@ _while_holding:HOLDABLES
 		_closed_sprite.hide()
 		_open_sprite.show()
 		action_complete()
+		
 		
 		return
 		var coin_flip: float = randf_range(-1,1.1)

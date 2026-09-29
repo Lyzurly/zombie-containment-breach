@@ -4,6 +4,7 @@
 @abstract func _on_click(
 clicks:int,while_holding:HOLDABLES
 ) -> void
+@abstract func _can_spawn_robot_part() -> bool
 @abstract func action_complete() -> void
 
 enum HOLDABLES{
@@ -13,6 +14,9 @@ enum HOLDABLES{
 var _click_count: int = 0
 var _hovered: bool = false
 
+func _init() -> void:
+	if _can_spawn_robot_part():
+		Manage_RobotParts.ref.log_spawner(self)
 func _ready() -> void:
 	Cursor.ref.clickable_hovered.connect(_on_clickable_hovered)
 	

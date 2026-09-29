@@ -12,6 +12,9 @@ func _my_sprite() -> Sprite2D:
 func _on_reset() -> void:
 	_animated_sprite.stop()
 
+func _can_spawn_robot_part() -> bool:
+	return false
+
 func _on_click(
 clicks:int,_while_holding:HOLDABLES
 ) -> void:
