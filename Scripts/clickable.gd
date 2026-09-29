@@ -2,10 +2,10 @@
 
 @abstract func _my_sprite() -> Sprite2D
 @abstract func _on_click(
-clicks:int,while_holding:HOLDABLES
+click_count:int,while_holding:HOLDABLES
 ) -> void
 @abstract func _can_spawn_robot_part() -> bool
-@abstract func action_complete() -> void
+@abstract func _on_action_complete() -> void
 
 enum HOLDABLES{
 	NOTHING,KEY1
@@ -47,19 +47,22 @@ func _physics_process_handle_hover() -> void:
 				Cursor.CURSOR_STATES.NONE
 				)
 			_hovered = false
-		
+
+func action_complete() -> void:
+	_on_action_complete()
+	if _can_spawn_robot_part():	
+		Manage_RobotParts.ref.collect_a_part()
 
 func click(while_holding:HOLDABLES) -> void:
 	if not Cursor.ref.is_active():
 		return
 	_click_count += 1
 	_on_click(_click_count,while_holding)
-	
-
 
 func _on_clickable_hovered() -> void:
 	#print(self," knows something was hovered...")
 	if _hovered:
+		print(self.name," is hovered and should be getting set pls")
 		Cursor.ref.set_hovered_clickable(self)
-	#else:
-		#print(self," was not hovered...")
+	else:
+		print(self.name," was not hovered...")

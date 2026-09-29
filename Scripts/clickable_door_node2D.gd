@@ -22,7 +22,7 @@ clicks:int,_while_holding:HOLDABLES
 		print_rich("[font_size=20]",self.name,"CLICKED")
 		_animated_sprite.play("open")
 		
-func action_complete() -> void:
+func _on_action_complete() -> void:
 	print("AWAITING OVER")
 	Cursor.ref.cursor_action_complete()
 		

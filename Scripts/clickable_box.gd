@@ -20,8 +20,7 @@ _while_holding:HOLDABLES
 		_closed_sprite.hide()
 		_open_sprite.show()
 		action_complete()
-		
-		
+
 		return
 		var coin_flip: float = randf_range(-1,1.1)
 		if coin_flip <= 0:
@@ -34,5 +33,5 @@ _while_holding:HOLDABLES
 func _on_reset():
 	pass
 	
-func action_complete() -> void:
+func _on_action_complete() -> void:
 	Cursor.ref.cursor_action_complete()

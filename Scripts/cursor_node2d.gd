@@ -16,6 +16,7 @@ enum CURSOR_STATES{
 func is_cursor_state(which:CURSOR_STATES) -> bool:
 	return which == _cursor_state
 func change_cursor_state(to:CURSOR_STATES) -> void:
+	
 	if not to == CURSOR_STATES.ACTION_COMPLETE:
 		if _cursor_state == CURSOR_STATES.AWAITING_ACTION:
 			return
@@ -24,7 +25,7 @@ func change_cursor_state(to:CURSOR_STATES) -> void:
 		#print("Cursor is trying to change to the ",CURSOR_STATES.find_key(to)," state...")
 	if _cursor_state == to:
 		return
-	
+	print("Cursor is trying to change to the ",CURSOR_STATES.find_key(to)," state...")
 	
 	if not _active and not to == CURSOR_STATES.ACTION_COMPLETE:
 		return

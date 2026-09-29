@@ -7,6 +7,8 @@ signal door_opened(which_door: Door, id:int)
 signal reset_room(which_room: Level_Room)
 
 const _MONSTER: PackedScene = preload("uid://dgsxvuatjaxvo")
+#const _ROBOT_PART: PackedScene = preload("uid://bn67j63304rcp")
+		
 
 var _last_room: Level_Room
 var _next_room: Level_Room
@@ -46,6 +48,27 @@ func spawn_monster() -> void:
 		_MONSTER.instantiate() as Monster
 	_last_room.add_child(monster)
 	monster.move_to_spawn_pos()
+
+#func spawn_robot_part(at_what:Clickable) -> void:
+	#if not _last_room:
+		#push_error("NO ROBOT PART IF NO ROOM HAHA")
+		#return
+		#
+	#var spawners: Array[Clickable] = \
+		#Manage_RobotParts.ref.get_spawners()
+	#if not spawners.has(at_what):
+		#print("NOT spawning at ",at_what.name,"...")
+		#return
+		#
+	#print("Spawning at ",at_what.name,"...")
+	#
+	#var part: Player_RobotPart = \
+		#_ROBOT_PART.instantiate()
+	#_last_room.add_child(part)
+	#
+	#var spawn_pos: Vector2 = at_what.global_position
+	#part.global_position = spawn_pos
+	
 
 func _on_level_faded() -> void:
 	if not _next_room:
