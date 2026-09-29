@@ -6,6 +6,11 @@ func _init() -> void:
 @onready var _debug_label: Label = %Debug_Label
 @onready var _sprite: AnimatedSprite2D = %AnimatedSprite2D
 
+var _idle_animation: String = "idle"
+var _walk_animation: String = "walk"
+
+var _flip_flip:bool = false
+
 var _holding: Clickable.HOLDABLES = Clickable.HOLDABLES.NOTHING
 var _clickable_to_activate: Clickable
 
@@ -29,6 +34,8 @@ func _ready() -> void:
 	
 func _ready_connections() -> void:
 	Manage_Room.ref.reset_room.connect(_on_reset_room)
+	Manage_RobotParts.ref.collected_all_parts.connect(
+		_on_collected_all_parts)
 
 func _ready_initial_states() -> void:
 	_change_move_state(MOVE_STATES.IDLE)
@@ -56,9 +63,9 @@ func _change_move_state(to:MOVE_STATES) -> void:
 	
 	match _move_state:
 		MOVE_STATES.IDLE:
-			_sprite.play("idle")
+			_sprite.play(_idle_animation)
 		MOVE_STATES.WALK_LEFT,MOVE_STATES.WALK_RIGHT:
-			_sprite.play("walk")
+			_sprite.play(_walk_animation)
 			match _move_state:
 				MOVE_STATES.WALK_LEFT:
 					_on_walk_left()
@@ -176,9 +183,9 @@ func _on_right() -> void:
 	_debug_label.text = "right"
 
 func _on_walk_left() -> void:
-	_sprite.flip_h = true
+	_sprite.flip_h = false if _flip_flip else true
 func _on_walk_right() -> void:
-	_sprite.flip_h = false
+	_sprite.flip_h = true if _flip_flip else false
 
 func _on_reset_room(_which_room:Level_Room) -> void:
 	# Layer 3 = Player Camera Zone Detection
@@ -190,3 +197,8 @@ func _on_reset_room(_which_room:Level_Room) -> void:
 	# Layer 3 = Player Camera Zone Detection
 	await get_tree().process_frame
 	set_collision_layer_value(3,true)
+
+func _on_collected_all_parts() -> void:
+	_flip_flip = true
+	_idle_animation = "idle_robot"
+	_walk_animation = "walk_robot"

@@ -10,7 +10,51 @@
 [ext_resource type="Texture2D" uid="uid://copc06vlttu7a" path="res://Images/player-sprites/v2/Idle_4.png" id="5_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://cr04i72j2pou2" path="res://Images/player-sprites/v2/Walk_4.png" id="5_gymyn"]
 [ext_resource type="Texture2D" uid="uid://k68wytdqimu0" path="res://Images/player-sprites/v2/Walk_5.png" id="6_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://cj10ywgbek7gj" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_0.png" id="6_pukcj"]
+[ext_resource type="Texture2D" uid="uid://coj55koqyy6en" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_1.png" id="7_1htnp"]
 [ext_resource type="Texture2D" uid="uid://ctben2k2tr63q" path="res://Images/player-sprites/v2/Walk_6.png" id="7_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://djgfwgk4gy72g" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_2.png" id="8_m376e"]
+[ext_resource type="Texture2D" uid="uid://beapdadhi4mcf" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_3.png" id="9_6b312"]
+[ext_resource type="Texture2D" uid="uid://dmlrlajkjb1xv" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_4.png" id="10_lisdf"]
+[ext_resource type="Texture2D" uid="uid://brxbuxy0yumfr" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_5.png" id="11_n1x1j"]
+[ext_resource type="Texture2D" uid="uid://es6ynvrwggup" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_6.png" id="12_c8b32"]
+[ext_resource type="Texture2D" uid="uid://bckto10w3pcbv" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_7.png" id="13_nj1g2"]
+[ext_resource type="Texture2D" uid="uid://ms7cuj0mk5vl" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_8.png" id="14_usbl8"]
+[ext_resource type="Texture2D" uid="uid://bl6g7m3uefj02" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_9.png" id="15_dtg1u"]
+[ext_resource type="Texture2D" uid="uid://cg1bmpthljvdd" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_10.png" id="16_nuaet"]
+[ext_resource type="Texture2D" uid="uid://bm25e2wrieiwh" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_11.png" id="17_bqbau"]
+[ext_resource type="Texture2D" uid="uid://dxu0axo6yo4dj" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_12.png" id="18_f5f5t"]
+[ext_resource type="Texture2D" uid="uid://3svmjhdyjlsk" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_13.png" id="19_qvbpb"]
+[ext_resource type="Texture2D" uid="uid://b51l7gddr7cmb" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_14.png" id="20_sscpr"]
+[ext_resource type="Texture2D" uid="uid://roj7blw6ef11" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_15.png" id="21_by7i4"]
+[ext_resource type="Texture2D" uid="uid://2iiib6h5e7sk" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_16.png" id="22_3uvy8"]
+[ext_resource type="Texture2D" uid="uid://b4aitj4c2qe5m" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_17.png" id="23_ss172"]
+[ext_resource type="Texture2D" uid="uid://hnuq0s2eqkts" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_0.png" id="30_jmelf"]
+[ext_resource type="Texture2D" uid="uid://d2p3vj3wccwo1" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_1.png" id="31_bjdqd"]
+[ext_resource type="Texture2D" uid="uid://2awk0r6uf0m7" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_2.png" id="32_feq18"]
+[ext_resource type="Texture2D" uid="uid://ct10xn01gxtvd" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_3.png" id="33_wcnj3"]
+[ext_resource type="Texture2D" uid="uid://ckjfwr5e852ps" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_4.png" id="34_jsob3"]
+[ext_resource type="Texture2D" uid="uid://dcql7pg6q6qrs" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_5.png" id="35_pg0gw"]
+[ext_resource type="Texture2D" uid="uid://w34pi55rwc74" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_6.png" id="36_qavoy"]
+[ext_resource type="Texture2D" uid="uid://bi6u8qtsm8q6v" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_7.png" id="37_w4w4b"]
+[ext_resource type="Texture2D" uid="uid://cgiayr2bc5rl5" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_8.png" id="38_h5cax"]
+[ext_resource type="Texture2D" uid="uid://dm8h2bjchub10" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_9.png" id="39_dj0x0"]
+[ext_resource type="Texture2D" uid="uid://6bfro37aknvr" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_10.png" id="40_f1uaf"]
+[ext_resource type="Texture2D" uid="uid://bxacld4mxsn4l" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_11.png" id="41_6hq81"]
+[ext_resource type="Texture2D" uid="uid://cevl5uifp4nu5" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_12.png" id="42_5cld6"]
+[ext_resource type="Texture2D" uid="uid://br8td4vhhntcx" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_13.png" id="43_o736f"]
+[ext_resource type="Texture2D" uid="uid://bw0ikkxaorrtb" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_14.png" id="44_ketbw"]
+[ext_resource type="Texture2D" uid="uid://ef1ppk5w8dqs" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_15.png" id="45_4grkl"]
+[ext_resource type="Texture2D" uid="uid://c0d8pquk1mlnl" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_16.png" id="46_6yrdb"]
+[ext_resource type="Texture2D" uid="uid://debmuvo8mx35o" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_17.png" id="47_ue0p1"]
+[ext_resource type="Texture2D" uid="uid://dlq4ptst8nfgj" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_18.png" id="48_isbcs"]
+[ext_resource type="Texture2D" uid="uid://cxlnjj3nd6v32" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_19.png" id="49_142e3"]
+[ext_resource type="Texture2D" uid="uid://clgk7jfxo1ech" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_20.png" id="50_ts2c8"]
+[ext_resource type="Texture2D" uid="uid://6enhduwfmsun" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_21.png" id="51_hcgbs"]
+[ext_resource type="Texture2D" uid="uid://k4plieh1anmi" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_22.png" id="52_mpfyg"]
+[ext_resource type="Texture2D" uid="uid://db16hu1kdqct2" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_23.png" id="53_un823"]
+[ext_resource type="Texture2D" uid="uid://ceqljrxtx73nt" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_24.png" id="54_aclic"]
+[ext_resource type="Texture2D" uid="uid://e35advngxoj8" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_25.png" id="55_0y64g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqjpo"]
 animations = [{
@@ -30,6 +74,65 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pukcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1htnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m376e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6b312")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lisdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n1x1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_c8b32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nj1g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_usbl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dtg1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nuaet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bqbau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_f5f5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qvbpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sscpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_by7i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3uvy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ss172")
+}],
+"loop": 1,
+"name": &"idle_robot",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -53,6 +156,89 @@ animations = [{
 "loop": 1,
 "name": &"walk",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_jmelf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bjdqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_feq18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_wcnj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jsob3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pg0gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qavoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_w4w4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_h5cax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_dj0x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_f1uaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_6hq81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_5cld6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_o736f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ketbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4grkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6yrdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ue0p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_isbcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_142e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ts2c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hcgbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_mpfyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_un823")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_aclic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_0y64g")
+}],
+"loop": 1,
+"name": &"walk_robot",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ks7b"]
@@ -67,11 +253,10 @@ script = ExtResource("1_6t5aa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1755679763]
 unique_name_in_owner = true
-position = Vector2(-1.486, 10.832)
+position = Vector2(-1.486, 5.272)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_kqjpo")
-animation = &"walk"
-frame_progress = 0.597928
+animation = &"walk_robot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1108627336]
 position = Vector2(-2, 30)

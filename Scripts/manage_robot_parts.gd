@@ -4,6 +4,7 @@ func _init() -> void:
 	ref = self
 
 signal collected_part(which_part:Player_RobotPart.PARTS)
+signal collected_all_parts()
 	
 	
 var _spawners: Array[Clickable] = []
@@ -37,4 +38,7 @@ func collect_a_part() -> void:
 		_collected_parts.append(part)
 		print("COLLECTING a ",Player_RobotPart.PARTS.find_key(part))
 		collected_part.emit(part)
+		
+		if _collected_parts.size() == 5:
+			collected_all_parts.emit()
 		break
