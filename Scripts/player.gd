@@ -98,7 +98,6 @@ func _physics_process_mouse() -> void:
 	Cursor.CURSOR_STATES.AWAITING_ACTION):
 		Cursor.ref.click()
 	
-
 func _physics_process_moving(delta: float) ->  void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

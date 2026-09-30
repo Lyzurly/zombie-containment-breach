@@ -7,7 +7,7 @@ class_name Clickable_Box extends Room_Object
 
 func _my_sprite() -> Sprite2D:
 	#print(self," reports it having the sprite ",$Closed_Sprite2D)
-	return $Closed_Sprite2D
+	return %ClickArea_Sprite2D
 
 func _can_spawn_robot_part() -> bool:
 	return true
@@ -35,3 +35,8 @@ func _on_reset():
 	
 func _on_action_complete() -> void:
 	Cursor.ref.cursor_action_complete()
+
+func _on_cursor_completed_action(for_what:Clickable) -> void:
+	if for_what == self:
+		print("UNCLICKABLE ",self)
+		_unclickable = true

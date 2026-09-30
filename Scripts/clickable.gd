@@ -6,6 +6,7 @@ click_count:int,while_holding:HOLDABLES
 ) -> void
 @abstract func _can_spawn_robot_part() -> bool
 @abstract func _on_action_complete() -> void
+@abstract func _on_cursor_completed_action(for_what:Clickable) -> void
 
 enum HOLDABLES{
 	NOTHING,KEY1
@@ -13,12 +14,14 @@ enum HOLDABLES{
 
 var _click_count: int = 0
 var _hovered: bool = false
+var _unclickable: bool = false
 
 func _init() -> void:
 	if _can_spawn_robot_part():
 		Manage_RobotParts.ref.log_spawner(self)
 func _ready() -> void:
 	Cursor.ref.clickable_hovered.connect(_on_clickable_hovered)
+	Cursor.ref.cursor_completed_action.connect(_on_cursor_completed_action)
 	
 func _physics_process(_delta: float) -> void:
 	if self is Room_Object:
@@ -36,7 +39,8 @@ func _physics_process_handle_hover() -> void:
 	
 	var sprite_rect: Rect2 = _my_sprite().get_rect()
 	#print(self," has the sprite ",_my_sprite)
-	if sprite_rect.has_point(mouse_pos):
+	if sprite_rect.has_point(mouse_pos) \
+	and not _unclickable:
 		#print("HOVERING ",self," with sprite ",_my_sprite," with rect ",sprite_rect,
 		 #" with transform ",_my_sprite().transform)
 		_hovered = true
@@ -58,6 +62,9 @@ func action_complete() -> void:
 	_on_action_complete()
 	if _can_spawn_robot_part():	
 		Manage_RobotParts.ref.collect_a_part(self)
+		
+func make_unclickable() -> void:
+	_unclickable = true
 
 func click(while_holding:HOLDABLES) -> void:
 	if not Cursor.ref.is_active():

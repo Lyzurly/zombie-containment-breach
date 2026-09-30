@@ -30,12 +30,12 @@ animations = [{
 "speed": 11.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_a3o7e"]
+[sub_resource type="Gradient" id="Gradient_vp30y"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_a3o7e"]
-gradient = SubResource("Gradient_a3o7e")
+gradient = SubResource("Gradient_vp30y")
 width = 44
-height = 81
+height = 75
 
 [node name="ClickableDoor_Node2D" type="Node2D" unique_id=1079640352]
 script = ExtResource("1_vp30y")
@@ -50,5 +50,5 @@ animation = &"open"
 [node name="ClickArea_Sprite2D" type="Sprite2D" parent="." unique_id=1119919461]
 unique_name_in_owner = true
 visible = false
-position = Vector2(0, -34.444)
 texture = SubResource("GradientTexture2D_a3o7e")
+offset = Vector2(0, -35)

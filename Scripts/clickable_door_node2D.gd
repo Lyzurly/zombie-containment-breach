@@ -25,6 +25,9 @@ clicks:int,_while_holding:HOLDABLES
 func _on_action_complete() -> void:
 	print("AWAITING OVER")
 	Cursor.ref.cursor_action_complete()
+	
+func _on_cursor_completed_action(_for_what:Clickable) -> void:
+	pass
 		
 func _on_animation_finished() -> void:
 	Manage_Room.ref.door_opened.emit(self,_door_id)

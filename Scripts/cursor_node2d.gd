@@ -4,6 +4,7 @@ func _init() -> void:
 	ref = self
 	
 signal clickable_hovered()
+signal cursor_completed_action(for_clickable:Clickable)
 
 @onready var _animation: AnimationPlayer = %AnimationPlayer
 	
@@ -102,6 +103,7 @@ func _on_awaiting_action() -> void:
 	
 func _on_action_complete() -> void:
 	_show_hover_cursor(false)
+	cursor_completed_action.emit(_hovered_clickable)
 	change_cursor_state(CURSOR_STATES.NONE)
 	
 func _show_hover_cursor(indeed:bool) -> void:
