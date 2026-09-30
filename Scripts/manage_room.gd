@@ -33,11 +33,14 @@ indeed:bool
 		
 func set_last_door(which_door:Clickable) -> void:
 	_last_door = which_door
-func get_last_door() -> Clickable:
-	if not _last_door:
+func get_last_door(error_override:bool=false) -> Clickable:
+	if not _last_door and not error_override:
 		push_error(
 			"ASKIN FOR A DOOR THAT AINT THERE GIRL")
 	return _last_door
+	
+func force_reset_room() -> void:
+	reset_room.emit(_last_room)
 
 func spawn_monster() -> void:
 	if not _last_room:

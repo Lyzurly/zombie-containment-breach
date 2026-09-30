@@ -1,5 +1,3 @@
-# Ensure empty spawners actually exist
----
 ### fade out the progress when all collected
 	- Transformation juice would be nice tbh
 ---

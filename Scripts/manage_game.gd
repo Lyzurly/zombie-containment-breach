@@ -5,7 +5,7 @@ func _init() -> void:
 	
 var _game_state: GAME_STATES = GAME_STATES.NONE
 enum GAME_STATES{
-	NONE,CINEMATIC,GAMEPLAY
+	NONE,CINEMATIC,GAMEPLAY,GAME_OVER
 	}
 	
 func _ready() -> void:
@@ -27,7 +27,11 @@ func change_game_state(to:GAME_STATES) -> void:
 			change_approved = _check_cinematic()
 		GAME_STATES.GAMEPLAY:
 			change_approved = _check_gameplay()
-		
+		GAME_STATES.GAME_OVER:
+			print("GONNA CHECK GAMEOVER IS OK")
+			change_approved = _check_game_over()
+	
+	
 	if change_approved:
 		match to:
 			GAME_STATES.NONE:
@@ -36,6 +40,9 @@ func change_game_state(to:GAME_STATES) -> void:
 				_on_cinematic()
 			GAME_STATES.GAMEPLAY:
 				_on_gameplay()
+			GAME_STATES.GAME_OVER:
+				print("GONNA TRY DOING THE GAMEOVER")
+				_on_game_over()
 		_game_state = to
 	else:
 		return
@@ -57,3 +64,11 @@ func _on_gameplay() -> void:
 	await get_tree().process_frame
 	Manage_Room.ref.spawn_monster()
 		
+func _check_game_over() -> bool:
+	print("CHECKING IF GAMEOVER IS OKAY")
+	return true
+func _on_game_over() -> void:
+	print("GAMEOVER IS HAPPENING")
+	Manage_Room.ref.force_reset_room()
+	await get_tree().process_frame
+	get_tree().reload_current_scene()

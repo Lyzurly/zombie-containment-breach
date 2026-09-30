@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		%AnimatedSprite2D.flip_h = true
 
 func move_to_spawn_pos() -> void:
-	var spawn_pos: Vector2 = Vector2(0,0)
+	var spawn_pos: Vector2 = Vector2(_SPAWN_X_POS,0)
 	#print("Current camera zone is ",
 		#Camera_Zones.ZONES.find_key(Camera_Zones.ref.get_current_zone()))
 	match Camera_Zones.ref.get_current_zone():
@@ -38,7 +38,8 @@ func move_to_spawn_pos() -> void:
 func _on_body_entered(body:PhysicsBody2D) -> void:
 	if body is Player:
 		await get_tree().process_frame
-		get_tree().reload_current_scene()
+		Manage_Game.ref.change_game_state(
+			Manage_Game.GAME_STATES.GAME_OVER)
 
 func _on_reset_room(_which_room:Level_Room) -> void:
 	queue_free()

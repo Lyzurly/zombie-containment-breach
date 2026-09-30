@@ -191,9 +191,10 @@ func _on_reset_room(_which_room:Level_Room) -> void:
 	# Layer 3 = Player Camera Zone Detection
 	set_collision_layer_value(3,false)
 	var door: Clickable = \
-		Manage_Room.ref.get_last_door()
+		Manage_Room.ref.get_last_door(true)
 	print("HERE DA DOOR ",door)
-	global_position.x = door.global_position.x
+	if door:
+		global_position.x = door.global_position.x
 	# Layer 3 = Player Camera Zone Detection
 	await get_tree().process_frame
 	set_collision_layer_value(3,true)
