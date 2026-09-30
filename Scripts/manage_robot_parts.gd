@@ -25,7 +25,9 @@ func log_spawner(which:Clickable) -> void:
 	print("LOGGING SPAWNER:\n\t",which)
 	_spawners.append(which)
 
-func collect_a_part() -> void:
+func collect_a_part(who_collected:Clickable) -> void:
+	if not _spawners.has(who_collected):
+		return
 	var parts: Array[Player_RobotPart.PARTS] = [
 	]
 	parts.assign(Player_RobotPart.PARTS.values())

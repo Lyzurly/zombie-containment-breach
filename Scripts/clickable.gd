@@ -51,7 +51,7 @@ func _physics_process_handle_hover() -> void:
 func action_complete() -> void:
 	_on_action_complete()
 	if _can_spawn_robot_part():	
-		Manage_RobotParts.ref.collect_a_part()
+		Manage_RobotParts.ref.collect_a_part(self)
 
 func click(while_holding:HOLDABLES) -> void:
 	if not Cursor.ref.is_active():
