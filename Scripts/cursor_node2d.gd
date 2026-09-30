@@ -4,6 +4,8 @@ func _init() -> void:
 	ref = self
 	
 signal clickable_hovered()
+
+@onready var _animation: AnimationPlayer = %AnimationPlayer
 	
 var _hovered_clickable: Clickable
 var _active: bool = true
@@ -50,6 +52,7 @@ func change_cursor_state(to:CURSOR_STATES) -> void:
 @onready var _sprite: AnimatedSprite2D = %AnimatedSprite2D
 
 func _ready() -> void:
+	_animation.play("hovering")
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
 func _input(_event: InputEvent) -> void:
@@ -82,17 +85,24 @@ func cursor_action_complete() -> void:
 	
 func _on_none() -> void:
 	print("CURSOR HOVER NONE")
+	_show_hover_cursor(false)
 	_hovered_clickable = null
 	
 func _on_hovering_clickable() -> void:
 	print("hovering a clickable...")
+	_show_hover_cursor(true)
 	clickable_hovered.emit()
 
 func _on_awaiting_action() -> void:
 	print("awaiting a clicked object to be actioned...")
+	_show_hover_cursor(false)
 	
 func _on_action_complete() -> void:
+	_show_hover_cursor(false)
 	change_cursor_state(CURSOR_STATES.NONE)
+	
+func _show_hover_cursor(indeed:bool) -> void:
+	%Hover_Sprite2D.visible = indeed
 
 func set_hovered_clickable(what: Clickable) -> void:
 	_hovered_clickable = what
