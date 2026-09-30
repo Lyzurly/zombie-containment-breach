@@ -56,7 +56,9 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("Click"):
+	if Input.is_action_just_pressed("Click") \
+	and not Cursor.ref.is_cursor_state(
+	Cursor.CURSOR_STATES.AWAITING_ACTION):
 		click()
 		
 func click() -> void:
@@ -95,6 +97,7 @@ func _on_hovering_clickable() -> void:
 
 func _on_awaiting_action() -> void:
 	print("awaiting a clicked object to be actioned...")
+	
 	_show_hover_cursor(false)
 	
 func _on_action_complete() -> void:

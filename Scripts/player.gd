@@ -93,7 +93,9 @@ func _physics_process_mouse() -> void:
 	else:
 		_change_dir_state(DIR_STATES.RIGHT)
 	
-	if Input.is_action_just_pressed("Click"):
+	if Input.is_action_just_pressed("Click") \
+	and not Cursor.ref.is_cursor_state(
+	Cursor.CURSOR_STATES.AWAITING_ACTION):
 		Cursor.ref.click()
 	
 
@@ -117,15 +119,7 @@ func _physics_process_moving(delta: float) ->  void:
 				direction = 0.
 				Walk_Target.ref.activate(false)
 				if _clickable_to_activate:
-					_clickable_to_activate.click(_holding)			
-					#TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					#I want the clicked thing to stay the clicked thing even after cursor leaves the thing. Commenting this back in will softlock in cursor action awaiting.		
-					#TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					#_clickable_to_activate = null
+					_clickable_to_activate.click(_holding)
 				
 	elif _is_move_state(MOVE_STATES.WALK_RIGHT):
 		direction = 1.
@@ -137,14 +131,6 @@ func _physics_process_moving(delta: float) ->  void:
 				print("stopped walking right; clickable is ",_clickable_to_activate)
 				if _clickable_to_activate:
 					_clickable_to_activate.click(_holding)
-					#TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					#I want the clicked thing to stay the clicked thing even after cursor leaves the thing. Commenting this back in will softlock in cursor action awaiting.		
-					#TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					 #TODO #TODO #TODO #TODO #TODO #TODO
-					#_clickable_to_activate = null
 		
 	if direction:
 		velocity.x = direction * SPEED

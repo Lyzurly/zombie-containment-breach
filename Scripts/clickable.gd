@@ -25,7 +25,9 @@ func _physics_process(_delta: float) -> void:
 		var object: Room_Object = self as Room_Object
 		
 		if object.can_hover() \
-		and Cursor.ref.is_active():
+		and Cursor.ref.is_active() \
+		and not Cursor.ref.is_cursor_state(
+			Cursor.CURSOR_STATES.AWAITING_ACTION):
 			_physics_process_handle_hover()
 
 func _physics_process_handle_hover() -> void:
@@ -46,6 +48,10 @@ func _physics_process_handle_hover() -> void:
 			Cursor.ref.change_cursor_state(
 				Cursor.CURSOR_STATES.NONE
 				)
+			await get_tree().process_frame
+			if Cursor.ref.is_cursor_state(
+			Cursor.CURSOR_STATES.AWAITING_ACTION):
+				return
 			_hovered = false
 
 func action_complete() -> void:
