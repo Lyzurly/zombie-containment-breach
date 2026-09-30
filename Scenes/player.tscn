@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bl3lborhje03c"]
 
+[ext_resource type="Script" uid="uid://3hlqd2ln7fn7" path="res://Scripts/celebration_node2d.gd" id="1_1htnp"]
 [ext_resource type="Script" uid="uid://0kbv4n8h4vd7" path="res://Scripts/player.gd" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://cj1hkh5cih5bn" path="res://Images/player-sprites/v2/Walk_1.png" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://ccvj7u70ful8g" path="res://Images/player-sprites/v2/Idle_1.png" id="2_gymyn"]
@@ -55,6 +56,63 @@
 [ext_resource type="Texture2D" uid="uid://db16hu1kdqct2" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_23.png" id="53_un823"]
 [ext_resource type="Texture2D" uid="uid://ceqljrxtx73nt" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_24.png" id="54_aclic"]
 [ext_resource type="Texture2D" uid="uid://e35advngxoj8" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_25.png" id="55_0y64g"]
+
+[sub_resource type="Gradient" id="Gradient_1htnp"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y7hum"]
+gradient = SubResource("Gradient_1htnp")
+width = 1920
+height = 1080
+
+[sub_resource type="Gradient" id="Gradient_pukcj"]
+offsets = PackedFloat32Array(0.1880734, 0.51834863, 0.8165138)
+colors = PackedColorArray(0, 0, 0, 0, 1, 0.9483333, 0.69, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kqjpo"]
+gradient = SubResource("Gradient_pukcj")
+height = 340
+fill_from = Vector2(0.24973291, 0.94017094)
+fill_to = Vector2(0.74919873, 0)
+
+[sub_resource type="Animation" id="Animation_pukcj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Celebration_Node2D/Whirlygig_Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1htnp"]
+resource_name = "celebrate"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Celebration_Node2D/Whirlygig_Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m376e"]
+_data = {
+&"RESET": SubResource("Animation_pukcj"),
+&"celebrate": SubResource("Animation_1htnp")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqjpo"]
 animations = [{
@@ -245,11 +303,52 @@ animations = [{
 size = Vector2(26, 69)
 
 [node name="Player" type="Node2D" unique_id=502544076]
+metadata/_edit_vertical_guides_ = [-185.0]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1411004247]
 position = Vector2(0, -65)
 collision_layer = 6
 script = ExtResource("1_6t5aa")
+
+[node name="Celebration_Node2D" type="Node2D" parent="Player" unique_id=734430614]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+position = Vector2(0, 65)
+script = ExtResource("1_1htnp")
+
+[node name="Blackout_Sprite2D" type="Sprite2D" parent="Player/Celebration_Node2D" unique_id=1709155173]
+texture = SubResource("GradientTexture2D_y7hum")
+
+[node name="Whirlygig_Node2D" type="Node2D" parent="Player/Celebration_Node2D" unique_id=1729406953]
+position = Vector2(0, -50)
+
+[node name="Node2D" type="Node2D" parent="Player/Celebration_Node2D/Whirlygig_Node2D" unique_id=1520474232]
+position = Vector2(0, 50)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Celebration_Node2D/Whirlygig_Node2D/Node2D" unique_id=108869632]
+texture = SubResource("GradientTexture2D_kqjpo")
+offset = Vector2(0, -50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Player/Celebration_Node2D/Whirlygig_Node2D/Node2D" unique_id=582767991]
+rotation = -1.5707964
+texture = SubResource("GradientTexture2D_kqjpo")
+offset = Vector2(50, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Player/Celebration_Node2D/Whirlygig_Node2D/Node2D" unique_id=941125488]
+rotation = 0.82030475
+texture = SubResource("GradientTexture2D_kqjpo")
+offset = Vector2(-51.974, -30.772)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Player/Celebration_Node2D/Whirlygig_Node2D/Node2D" unique_id=360450130]
+rotation = -0.82030475
+texture = SubResource("GradientTexture2D_kqjpo")
+offset = Vector2(40.35, -30.772)
+
+[node name="Celebration_AnimationPlayer" type="AnimationPlayer" parent="Player/Celebration_Node2D" unique_id=1100075199]
+unique_name_in_owner = true
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_m376e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1755679763]
 unique_name_in_owner = true

@@ -5,6 +5,8 @@ func _init() -> void:
 
 @onready var _debug_label: Label = %Debug_Label
 @onready var _sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var _celebration: Player_Celebration = %Celebration_Node2D
+@onready var _celebration_animation: AnimationPlayer = %Celebration_AnimationPlayer
 
 var _idle_animation: String = "idle"
 var _walk_animation: String = "walk"
@@ -188,3 +190,10 @@ func _on_collected_all_parts() -> void:
 	_flip_flip = true
 	_idle_animation = "idle_robot"
 	_walk_animation = "walk_robot"
+	Manage_HUD.ref.hide_hud()
+	z_on_top(true)
+	_celebration.celebrate()
+
+func z_on_top(indeed:bool) -> void:
+	z_index = \
+		4096 if indeed else 0

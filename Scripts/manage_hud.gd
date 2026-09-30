@@ -5,8 +5,8 @@ func _init() -> void:
 	
 var _placeholders: Array[Control] = []
 
-#@onready var _hud_container: MarginContainer = %HUD_MarginContainer
-#
+@onready var _hud_container: MarginContainer = %HUD_MarginContainer
+
 
 func _ready() -> void:
 	_ready_placeholders()
@@ -18,3 +18,8 @@ func _ready_placeholders() -> void:
 	
 	for placeholder in _placeholders:
 		placeholder.modulate.a = 0.
+
+func hide_hud() -> void:
+	var tween: Tween = create_tween()
+	tween.tween_property(
+		_hud_container,"modulate",Color.TRANSPARENT,2.)

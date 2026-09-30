@@ -179,7 +179,6 @@ position = Vector2(32.857117, -56.190475)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Clickable_Box6" parent="Level/TileMap/Room2" unique_id=1383326619 instance=ExtResource("10_hptm8")]
-visible = false
 position = Vector2(-342.85718, -56.190475)
 scale = Vector2(0.99999994, 0.99999994)
 
