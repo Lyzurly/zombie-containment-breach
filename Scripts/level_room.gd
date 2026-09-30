@@ -3,6 +3,8 @@ class_name Level_Room extends TileMapLayer
 var _active: bool = false
 
 var _visited_by_monster: bool = false
+var _has_a_monster: bool = false
+var _monster_likelihood_floor: float = -1.
 
 func _ready() -> void:
 	if name == "Room1":
@@ -23,10 +25,19 @@ func set_active(indeed:bool) -> void:
 func is_active() -> bool:
 	return _active
 
+func update_monster_havingness(indeed:bool) -> void:
+	_has_a_monster = indeed
 func set_visited_by_monster() -> void:
 	_visited_by_monster = true
 func was_visited_by_monster() -> bool:
 	return _visited_by_monster
+func does_have_monster() -> bool:
+	return _has_a_monster
+
+func reduce_monster_likelihood() -> void:
+	_monster_likelihood_floor -= .5
+func get_monster_likelihood_floor() -> float:
+	return _monster_likelihood_floor
 
 func _on_reset_room(which_room:Level_Room) -> void:
 	if not self == which_room:

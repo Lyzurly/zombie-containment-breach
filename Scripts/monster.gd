@@ -1,6 +1,7 @@
 class_name Monster extends Node2D
 	
 const SPEED: float = 50.
+var _my_room: Level_Room
 
 
 func _ready() -> void:
@@ -17,6 +18,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		%AnimatedSprite2D.flip_h = true
 
+func assign_room_to_monster(which: Level_Room) -> void:
+	_my_room = which
+	_my_room.set_visited_by_monster()
+	_my_room.update_monster_havingness(true)
+	
+
 func move_to_spawn_pos(
 pos_override:Vector2=Vector2.ZERO
 ) -> void:
@@ -24,8 +31,8 @@ pos_override:Vector2=Vector2.ZERO
 		Manage_Room.ref.get_monster_spawn_x_pos()
 	var spawn_pos: Vector2 = Vector2(spawn_x_pos,0)
 	if pos_override == Vector2.ZERO:
-		#print("Current camera zone is ",
-			#Camera_Zones.ZONES.find_key(Camera_Zones.ref.get_current_zone()))
+		print("Monster thinks current camera zone is ",
+			Camera_Zones.ZONES.find_key(Camera_Zones.ref.get_current_zone()))
 		match Camera_Zones.ref.get_current_zone():
 			Camera_Zones.ZONES.LEFT:
 				spawn_pos.x = spawn_x_pos
@@ -49,4 +56,6 @@ func _on_body_entered(body:PhysicsBody2D) -> void:
 			Manage_Game.GAME_STATES.GAME_OVER)
 
 func _on_reset_room(_which_room:Level_Room) -> void:
+	_my_room.update_monster_havingness(false)
+	_my_room = null
 	queue_free()

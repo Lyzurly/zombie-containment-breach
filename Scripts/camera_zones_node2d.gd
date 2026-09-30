@@ -47,6 +47,8 @@ zone:ZONES
 ) -> void:
 	if body is Player:
 		_change_zone(zone)
+		await get_tree().process_frame
+		Manage_Room.ref.spawn_monster_if_needed()
 
 func _on_mid_zone() -> void:
 	Camera.ref.move(ZONES.MID)

@@ -50,13 +50,26 @@ pos_override:Vector2=Vector2.ZERO
 	if not _last_room:
 		push_error("NO MONSTA IF NO ROOM HAHA")
 		return
-	if _last_room.was_visited_by_monster():
+	if _last_room.does_have_monster():
 		return
+	if _last_room.was_visited_by_monster():
+		_last_room.reduce_monster_likelihood()
+		if not _roll_monster(_last_room):
+			return
+		pos_override = Vector2(Vector2.ZERO)
+		print("MONSTER ROLLED!")
 	var monster: Monster = \
 		_MONSTER.instantiate() as Monster
 	_last_room.add_child(monster)
-	_last_room.set_visited_by_monster()
+	monster.assign_room_to_monster(_last_room)
 	monster.move_to_spawn_pos(pos_override)
+	
+func _roll_monster(to_what_room:Level_Room) -> bool:
+	var floor: float = \
+		to_what_room.get_monster_likelihood_floor()
+	var roll: float = randf_range(
+		floor,1)
+	return roll > 0
 
 #func spawn_robot_part(at_what:Clickable) -> void:
 	#if not _last_room:
@@ -94,19 +107,24 @@ func _on_level_faded() -> void:
 	
 	_last_room = _next_room 
 	_next_room = null
-	
-	_spawn_monster_if_needed()
 
-func _spawn_monster_if_needed() -> void:
+func spawn_monster_if_needed() -> void:
 	var spawn_x_pos: float = \
 		Manage_Room.ref.get_monster_spawn_x_pos()
 	match _last_room.name:
 		"Room2":
-			print("ROOM 2 BABY")
 			spawn_monster(
 				Vector2(
 				-spawn_x_pos-200,0)
 			)	
+		"Room4":
+			var roll: float = randf_range(-1,1)
+			var polarity: float = \
+				-1 if roll < 0 else 1
+			spawn_monster(
+				Vector2(
+				polarity*spawn_x_pos,0)
+			)
 	
 func _activate_room(room:Level_Room,indeed:bool) -> void:
 	room.visible = indeed
