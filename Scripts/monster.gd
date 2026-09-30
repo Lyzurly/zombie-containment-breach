@@ -1,7 +1,7 @@
 class_name Monster extends Node2D
 	
 const SPEED: float = 50.
-const _SPAWN_X_POS: float = 700.
+
 
 func _ready() -> void:
 	print("MONSTER READY")
@@ -17,24 +17,31 @@ func _physics_process(delta: float) -> void:
 	else:
 		%AnimatedSprite2D.flip_h = true
 
-func move_to_spawn_pos() -> void:
-	var spawn_pos: Vector2 = Vector2(_SPAWN_X_POS,0)
-	#print("Current camera zone is ",
-		#Camera_Zones.ZONES.find_key(Camera_Zones.ref.get_current_zone()))
-	match Camera_Zones.ref.get_current_zone():
-		Camera_Zones.ZONES.LEFT:
-			spawn_pos.x = _SPAWN_X_POS
-		Camera_Zones.ZONES.RIGHT:
-			spawn_pos.x = -_SPAWN_X_POS
-		Camera_Zones.ZONES.MID:
-			if Player.ref.global_position.x > 0:
-				spawn_pos.x = -_SPAWN_X_POS
-			else:
-				spawn_pos.x = _SPAWN_X_POS
+func move_to_spawn_pos(
+pos_override:Vector2=Vector2.ZERO
+) -> void:
+	var spawn_x_pos: float = \
+		Manage_Room.ref.get_monster_spawn_x_pos()
+	var spawn_pos: Vector2 = Vector2(spawn_x_pos,0)
+	if pos_override == Vector2.ZERO:
+		#print("Current camera zone is ",
+			#Camera_Zones.ZONES.find_key(Camera_Zones.ref.get_current_zone()))
+		match Camera_Zones.ref.get_current_zone():
+			Camera_Zones.ZONES.LEFT:
+				spawn_pos.x = spawn_x_pos
+			Camera_Zones.ZONES.RIGHT:
+				spawn_pos.x = -spawn_x_pos
+			Camera_Zones.ZONES.MID:
+				if Player.ref.global_position.x > 0:
+					spawn_pos.x = -spawn_x_pos
+				else:
+					spawn_pos.x = spawn_x_pos
+	else:
+		print("POS OVERRIDE DETECTED AS ",pos_override)
+		spawn_pos = pos_override
 	global_position = spawn_pos
 	#print("MONSTER IS AT ",global_position)
 			
-
 func _on_body_entered(body:PhysicsBody2D) -> void:
 	if body is Player:
 		await get_tree().process_frame

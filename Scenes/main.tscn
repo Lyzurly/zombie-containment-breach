@@ -36,6 +36,15 @@ scenes/6/scene = ExtResource("11_jkdf5")
 [sub_resource type="TileSet" id="TileSet_kqjpo"]
 sources/0 = SubResource("TileSetScenesCollectionSource_6bp64")
 
+[sub_resource type="Gradient" id="Gradient_0rsq4"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gt3je"]
+gradient = SubResource("Gradient_0rsq4")
+width = 1920
+height = 1080
+
 [node name="Node2D" type="Node2D" unique_id=791766924]
 
 [node name="Managers" parent="." unique_id=1565604489 instance=ExtResource("7_6bp64")]
@@ -198,7 +207,7 @@ scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("21_3pmx8")
 
 [node name="ClickableDoor_Node2D4" parent="Level/TileMap/Room3" unique_id=227892233 instance=ExtResource("8_6iyac")]
-position = Vector2(-212.38095, -47.619045)
+position = Vector2(-232.121, -47.619)
 scale = Vector2(1.0000002, 1.0000002)
 _door_id = 3
 
@@ -246,3 +255,12 @@ position = Vector2(0, -100)
 offset = Vector2(0, -100)
 zoom = Vector2(1.356, 1.356)
 script = ExtResource("2_d1ilt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=478906463]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1599992144]
+z_index = -4096
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture2D_gt3je")
