@@ -11,5 +11,4 @@ func celebrate() -> void:
 	get_tree().paused = false
 	hide()
 	_celebration_animation.stop()
-	Player.ref.z_on_top(false)
 	Cursor.ref.show()

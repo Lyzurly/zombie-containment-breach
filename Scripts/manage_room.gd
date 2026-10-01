@@ -52,7 +52,8 @@ pos_override:Vector2=Vector2.ZERO
 		return
 	if _last_room.does_have_monster():
 		return
-	if _last_room.was_visited_by_monster():
+	if _last_room.was_visited_by_monster() \
+	and not Manage_RobotParts.ref.all_parts_are_collected():
 		_last_room.reduce_monster_likelihood()
 		if not _roll_monster(_last_room):
 			return
@@ -118,6 +119,11 @@ func spawn_monster_if_needed() -> void:
 				-spawn_x_pos-200,0)
 			)	
 		"Room4":
+			spawn_monster(
+				Vector2(
+				-spawn_x_pos,0)
+			)	
+		"Room5":
 			var roll: float = randf_range(-1,1)
 			var polarity: float = \
 				-1 if roll < 0 else 1

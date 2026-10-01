@@ -5,7 +5,7 @@ func _init() -> void:
 	
 var _game_state: GAME_STATES = GAME_STATES.NONE
 enum GAME_STATES{
-	NONE,CINEMATIC,GAMEPLAY,GAME_OVER
+	NONE,CINEMATIC,GAMEPLAY,GAME_OVER,GAME_WIN
 	}
 	
 func _ready() -> void:
@@ -30,6 +30,8 @@ func change_game_state(to:GAME_STATES) -> void:
 		GAME_STATES.GAME_OVER:
 			print("GONNA CHECK GAMEOVER IS OK")
 			change_approved = _check_game_over()
+		GAME_STATES.GAME_WIN:
+			change_approved = _check_game_win()
 	
 	
 	if change_approved:
@@ -43,6 +45,8 @@ func change_game_state(to:GAME_STATES) -> void:
 			GAME_STATES.GAME_OVER:
 				print("GONNA TRY DOING THE GAMEOVER")
 				_on_game_over()
+			GAME_STATES.GAME_WIN:
+				_on_game_win()
 		_game_state = to
 	else:
 		return
@@ -70,3 +74,8 @@ func _on_game_over() -> void:
 	Manage_Room.ref.force_reset_room()
 	await get_tree().process_frame
 	get_tree().reload_current_scene()
+	
+func _check_game_win() -> bool:
+	return true
+func _on_game_win() -> void:
+	Player.ref.end_game()

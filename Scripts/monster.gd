@@ -2,6 +2,7 @@ class_name Monster extends Node2D
 	
 const SPEED: float = 50.
 var _my_room: Level_Room
+var _is_moving: bool = true
 
 
 func _ready() -> void:
@@ -12,7 +13,8 @@ func _ready() -> void:
 	
 	
 func _physics_process(delta: float) -> void:
-	global_position.x = move_toward(global_position.x,Player.ref.global_position.x,delta * SPEED)
+	if _is_moving:
+		global_position.x = move_toward(global_position.x,Player.ref.global_position.x,delta * SPEED)
 	if Player.ref.global_position < global_position:
 		%AnimatedSprite2D.flip_h = false
 	else:
@@ -52,6 +54,22 @@ pos_override:Vector2=Vector2.ZERO
 func _on_body_entered(body:PhysicsBody2D) -> void:
 	if body is Player:
 		await get_tree().process_frame
+		if Manage_RobotParts.ref.all_parts_are_collected():
+			Cursor.ref.set_active(false)
+			_is_moving = false
+			Player.ref.override_movement(true)
+			await get_tree().create_timer(2).timeout
+			Player.ref.defeat_monster()
+			await get_tree().create_timer(3).timeout
+			var death: Monster_Death = %Death_Node2D
+			_z_on_top(true)
+			death.die()
+			Player.ref.hide()
+			await get_tree().create_timer(2).timeout
+			Manage_Game.ref.change_game_state(
+				Manage_Game.GAME_STATES.GAME_WIN)
+			
+			return
 		Manage_Game.ref.change_game_state(
 			Manage_Game.GAME_STATES.GAME_OVER)
 
@@ -59,3 +77,7 @@ func _on_reset_room(_which_room:Level_Room) -> void:
 	_my_room.update_monster_havingness(false)
 	_my_room = null
 	queue_free()
+	
+func _z_on_top(indeed:bool) -> void:
+	z_index = \
+		4096 if indeed else 0

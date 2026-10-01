@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b0fbwg3p4sp5w" path="res://Images/monster-sprites/Idle.png" id="1_hyvb2"]
 [ext_resource type="Script" uid="uid://cxseys0klaw74" path="res://Scripts/monster.gd" id="1_ujuxu"]
+[ext_resource type="Script" uid="uid://va1wg55v6og2" path="res://Scripts/monster_death_node2d.gd" id="2_7cfu4"]
 [ext_resource type="Texture2D" uid="uid://cttlu8jje8o5t" path="res://Images/monster-sprites/Idle_2.png" id="2_ujuxu"]
 [ext_resource type="Texture2D" uid="uid://ct15nns25i2sb" path="res://Images/monster-sprites/v2/Walk/skeleton-Walk_0.png" id="4_e2peb"]
 [ext_resource type="Texture2D" uid="uid://wyvjtaeacspt" path="res://Images/monster-sprites/v2/Walk/skeleton-Walk_1.png" id="5_7cfu4"]
@@ -29,6 +30,148 @@
 [ext_resource type="Texture2D" uid="uid://44nytcovwuhw" path="res://Images/monster-sprites/v2/Walk/skeleton-Walk_23.png" id="27_0edgr"]
 [ext_resource type="Texture2D" uid="uid://h3vhe2pbybrk" path="res://Images/monster-sprites/v2/Walk/skeleton-Walk_24.png" id="28_uamka"]
 [ext_resource type="Texture2D" uid="uid://ddsk88cl00kq8" path="res://Images/monster-sprites/v2/Walk/skeleton-Walk_25.png" id="29_6x5mt"]
+
+[sub_resource type="Gradient" id="Gradient_1htnp"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qlac0"]
+gradient = SubResource("Gradient_1htnp")
+width = 1920
+height = 1080
+
+[sub_resource type="Animation" id="Animation_7cfu4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/AnimatedSprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.17, 0.17)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Death_Node2D/Blackout_Sprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qlac0"]
+resource_name = "die"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.93333334, 2.4333334, 3.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(18.892157, 18.892157, 18.892157, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.64, 1.9666667, 2.2333333),
+"transitions": PackedFloat32Array(1, 1.6817931, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(22.5, -60), Vector2(50, 50)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/AnimatedSprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.64, 2.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.62831855]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.64, 2.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.17, 0.17), Vector2(0.096, 0.096)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Death_Node2D/Blackout_Sprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 5.9607, 7.4273663),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4w6mn"]
+_data = {
+&"RESET": SubResource("Animation_7cfu4"),
+&"die": SubResource("Animation_qlac0")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
 atlas = ExtResource("1_hyvb2")
@@ -230,6 +373,22 @@ size = Vector2(81, 130)
 [node name="Monster" type="Node2D" unique_id=403595069]
 script = ExtResource("1_ujuxu")
 
+[node name="Death_Node2D" type="Node2D" parent="." unique_id=82668430]
+unique_name_in_owner = true
+process_mode = 3
+position = Vector2(0, 65)
+script = ExtResource("2_7cfu4")
+
+[node name="Blackout_Sprite2D" type="Sprite2D" parent="Death_Node2D" unique_id=873745505]
+modulate = Color(1, 1, 1, 0)
+z_index = 4001
+texture = SubResource("GradientTexture2D_qlac0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Death_Node2D" unique_id=1155287045]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_4w6mn")
+
 [node name="Area2D" type="Area2D" parent="." unique_id=534965015]
 unique_name_in_owner = true
 position = Vector2(0, -64)
@@ -238,6 +397,7 @@ collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=235114857]
 unique_name_in_owner = true
+process_mode = 3
 scale = Vector2(0.17, 0.17)
 sprite_frames = SubResource("SpriteFrames_y7hum")
 animation = &"run"

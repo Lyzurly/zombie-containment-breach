@@ -6,6 +6,7 @@ func _ready() -> void:
 	super._ready()
 	_animated_sprite.animation_finished.connect(_on_animation_finished)
 	Manage_Room.ref.door_opened.connect(_on_door_opened)
+	Manage_RobotParts.ref.collected_all_parts.connect(_on_collected_all_parts)
 
 func _my_sprite() -> Sprite2D:
 	return %ClickArea_Sprite2D
@@ -45,3 +46,6 @@ func _on_door_opened(door: Door, id:int) -> void:
 		#push_error(
 			#"WHOOPSIE COULDN'T FIND A VALID DOOR TARGET"
 		#)
+
+func _on_collected_all_parts() -> void:
+	make_unclickable()

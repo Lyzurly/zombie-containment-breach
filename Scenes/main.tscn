@@ -36,12 +36,12 @@ scenes/6/scene = ExtResource("11_jkdf5")
 [sub_resource type="TileSet" id="TileSet_kqjpo"]
 sources/0 = SubResource("TileSetScenesCollectionSource_6bp64")
 
-[sub_resource type="Gradient" id="Gradient_0rsq4"]
+[sub_resource type="Gradient" id="Gradient_r33sp"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_gt3je"]
-gradient = SubResource("Gradient_0rsq4")
+gradient = SubResource("Gradient_r33sp")
 width = 1920
 height = 1080
 
@@ -50,6 +50,7 @@ height = 1080
 [node name="Managers" parent="." unique_id=1565604489 instance=ExtResource("7_6bp64")]
 
 [node name="Level" type="Node2D" parent="." unique_id=397754056]
+process_mode = 3
 script = ExtResource("2_fdnlq")
 
 [node name="Walk_Target_Node2D" parent="Level" unique_id=2011052718 instance=ExtResource("9_ynf5e")]
@@ -77,6 +78,14 @@ texture = ExtResource("3_21xkr")
 [node name="ClickableDoor_Node2D2" parent="Level/TileMap/Room1" unique_id=1079640352 instance=ExtResource("8_6iyac")]
 position = Vector2(8.571429, -47.619045)
 _door_id = 1
+
+[node name="ClickableDoor_Node2D3" parent="Level/TileMap/Room1" unique_id=130823307 instance=ExtResource("8_6iyac")]
+position = Vector2(338.57147, -47.619045)
+_door_id = 5
+
+[node name="Clickable_Box19" parent="Level/TileMap/Room1" unique_id=773714240 instance=ExtResource("10_hptm8")]
+position = Vector2(290.00003, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Room2" type="TileMapLayer" parent="Level/TileMap" unique_id=1464159092]
 process_mode = 4
@@ -130,12 +139,8 @@ position = Vector2(-280.9524, -47.619045)
 scale = Vector2(1.0000001, 1.0000001)
 _door_id = 1
 
-[node name="Clickable_Box" parent="Level/TileMap/Room2" unique_id=773714240 instance=ExtResource("10_hptm8")]
+[node name="Clickable_Box" parent="Level/TileMap/Room2" unique_id=1929209384 instance=ExtResource("10_hptm8")]
 position = Vector2(96.66667, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box2" parent="Level/TileMap/Room2" unique_id=1302423993 instance=ExtResource("10_hptm8")]
-position = Vector2(-154.28572, -56.190475)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Clickable_Box3" parent="Level/TileMap/Room2" unique_id=1603994718 instance=ExtResource("10_hptm8")]
@@ -147,31 +152,11 @@ position = Vector2(-24.285736, -56.190475)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Clickable_Box7" parent="Level/TileMap/Room2" unique_id=192137406 instance=ExtResource("10_hptm8")]
-position = Vector2(-56.190483, -56.190475)
+position = Vector2(-37.61905, -71.42857)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Clickable_Box8" parent="Level/TileMap/Room2" unique_id=1163743514 instance=ExtResource("10_hptm8")]
-position = Vector2(-117.14287, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box9" parent="Level/TileMap/Room2" unique_id=523848366 instance=ExtResource("10_hptm8")]
-position = Vector2(73.80954, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box10" parent="Level/TileMap/Room2" unique_id=25609810 instance=ExtResource("10_hptm8")]
-position = Vector2(121.42857, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box11" parent="Level/TileMap/Room2" unique_id=1674441219 instance=ExtResource("10_hptm8")]
-position = Vector2(2.3809357, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box12" parent="Level/TileMap/Room2" unique_id=1486153788 instance=ExtResource("10_hptm8")]
-position = Vector2(156.19049, -56.190475)
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Clickable_Box13" parent="Level/TileMap/Room2" unique_id=1684968697 instance=ExtResource("10_hptm8")]
-position = Vector2(-203.33337, -56.190475)
+position = Vector2(-49.523804, -56.190475)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Clickable_Box5" parent="Level/TileMap/Room2" unique_id=618081848 instance=ExtResource("10_hptm8")]
@@ -208,12 +193,41 @@ texture = ExtResource("21_3pmx8")
 [node name="ClickableDoor_Node2D4" parent="Level/TileMap/Room3" unique_id=227892233 instance=ExtResource("8_6iyac")]
 position = Vector2(-232.121, -47.619)
 scale = Vector2(1.0000002, 1.0000002)
-_door_id = 3
+_door_id = 5
 
 [node name="ClickableDoor_Node2D3" parent="Level/TileMap/Room3" unique_id=1599929456 instance=ExtResource("8_6iyac")]
 position = Vector2(331.42856, -47.619045)
 scale = Vector2(1.0000002, 1.0000002)
 _door_id = 2
+
+[node name="ClickableDoor_Node2D5" parent="Level/TileMap/Room3" unique_id=275803200 instance=ExtResource("8_6iyac")]
+position = Vector2(44.7619, -47.619045)
+scale = Vector2(1.0000002, 1.0000002)
+_door_id = 4
+
+[node name="Clickable_Box9" parent="Level/TileMap/Room3" unique_id=523848366 instance=ExtResource("10_hptm8")]
+position = Vector2(144.7619, -71.90476)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box10" parent="Level/TileMap/Room3" unique_id=25609810 instance=ExtResource("10_hptm8")]
+position = Vector2(130.9524, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box11" parent="Level/TileMap/Room3" unique_id=1674441219 instance=ExtResource("10_hptm8")]
+position = Vector2(-147.61906, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box13" parent="Level/TileMap/Room3" unique_id=615070830 instance=ExtResource("10_hptm8")]
+position = Vector2(-147.61905, -70.952385)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box14" parent="Level/TileMap/Room3" unique_id=1967223677 instance=ExtResource("10_hptm8")]
+position = Vector2(-319.52383, -55.714283)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box12" parent="Level/TileMap/Room3" unique_id=1486153788 instance=ExtResource("10_hptm8")]
+position = Vector2(156.1905, -56.19048)
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Room4" type="TileMapLayer" parent="Level/TileMap" unique_id=1325108283]
 process_mode = 4
@@ -232,10 +246,117 @@ position = Vector2(0, -50.88)
 scale = Vector2(1.3333337, 1.3333337)
 texture = ExtResource("20_gt3je")
 
+[node name="Clickable_Box13" parent="Level/TileMap/Room4" unique_id=1684968697 instance=ExtResource("10_hptm8")]
+position = Vector2(-304.76193, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box15" parent="Level/TileMap/Room4" unique_id=2064771769 instance=ExtResource("10_hptm8")]
+position = Vector2(-304.76193, -71.42857)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box16" parent="Level/TileMap/Room4" unique_id=1422583158 instance=ExtResource("10_hptm8")]
+position = Vector2(-304.76193, -86.666664)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box14" parent="Level/TileMap/Room4" unique_id=1580183435 instance=ExtResource("10_hptm8")]
+position = Vector2(-203.33339, -56.19048)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box17" parent="Level/TileMap/Room4" unique_id=1645653631 instance=ExtResource("10_hptm8")]
+position = Vector2(-66.190475, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box18" parent="Level/TileMap/Room4" unique_id=901128402 instance=ExtResource("10_hptm8")]
+position = Vector2(337.14288, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
 [node name="ClickableDoor_Node2D3" parent="Level/TileMap/Room4" unique_id=1759102869 instance=ExtResource("8_6iyac")]
 position = Vector2(14.761902, -47.619045)
 scale = Vector2(1.0000002, 1.0000002)
+_door_id = 4
+
+[node name="Room5" type="TileMapLayer" parent="Level/TileMap" unique_id=739139102]
+process_mode = 4
+visible = false
+tile_map_data = PackedByteArray("AAD0//3/AAAAAAAAAQD0//7/AAAAAAAAAQD0////AAAAAAAAAQD0/wAAAAAAAAAAAQD0/wEAAAAAAAAAAQD0/wIAAAAAAAAAAQD1//3/AAAAAAAAAQD1//7/AAAAAAAAAQD1////AAAAAAAAAQD1/wAAAAAAAAAAAQD1/wEAAAAAAAAAAQD1/wIAAAAAAAAAAQD2//3/AAAAAAAAAQD2//7/AAAAAAAAAQD2////AAAAAAAAAQD2/wAAAAAAAAAAAQD2/wEAAAAAAAAAAQD2/wIAAAAAAAAAAQD3//3/AAAAAAAAAQD3//7/AAAAAAAAAQD3////AAAAAAAAAQD3/wAAAAAAAAAAAQD3/wEAAAAAAAAAAQD3/wIAAAAAAAAAAQD4//3/AAAAAAAAAQD4//7/AAAAAAAAAQD4////AAAAAAAAAQD4/wAAAAAAAAAAAQD4/wEAAAAAAAAAAQD4/wIAAAAAAAAAAQD5//3/AAAAAAAAAQD5//7/AAAAAAAAAQD5////AAAAAAAAAQD5/wAAAAAAAAAAAQD5/wEAAAAAAAAAAQD5/wIAAAAAAAAAAQD6//3/AAAAAAAAAQD6//7/AAAAAAAAAQD6////AAAAAAAAAQD6/wAAAAAAAAAAAQD6/wEAAAAAAAAAAQD6/wIAAAAAAAAAAQD7//3/AAAAAAAAAQD7//7/AAAAAAAAAQD7////AAAAAAAAAQD7/wAAAAAAAAAAAQD7/wEAAAAAAAAAAQD7/wIAAAAAAAAAAQD8//3/AAAAAAAAAQD8//7/AAAAAAAAAQD8////AAAAAAAAAQD8/wAAAAAAAAAAAQD8/wEAAAAAAAAAAQD8/wIAAAAAAAAAAQD9//3/AAAAAAAAAQD9//7/AAAAAAAAAQD9////AAAAAAAAAQD9/wAAAAAAAAAAAQD9/wEAAAAAAAAAAQD9/wIAAAAAAAAAAQD+//3/AAAAAAAAAQD+//7/AAAAAAAAAQD+////AAAAAAAAAQD+/wAAAAAAAAAAAQD+/wEAAAAAAAAAAQD+/wIAAAAAAAAAAQD///3/AAAAAAAAAQD///7/AAAAAAAAAQD/////AAAAAAAAAQD//wAAAAAAAAAAAQD//wEAAAAAAAAAAQD//wIAAAAAAAAAAQAAAP3/AAAAAAAAAQAAAP7/AAAAAAAAAQAAAP//AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAIAAAAAAAAAAQABAP3/AAAAAAAAAQABAP7/AAAAAAAAAQABAP//AAAAAAAAAQABAAAAAAAAAAAAAQABAAEAAAAAAAAAAQABAAIAAAAAAAAAAQACAP3/AAAAAAAAAQACAP7/AAAAAAAAAQACAP//AAAAAAAAAQACAAAAAAAAAAAAAQACAAEAAAAAAAAAAQACAAIAAAAAAAAAAQADAP3/AAAAAAAAAQADAP7/AAAAAAAAAQADAP//AAAAAAAAAQADAAAAAAAAAAAAAQADAAEAAAAAAAAAAQADAAIAAAAAAAAAAQAEAP3/AAAAAAAAAQAEAP7/AAAAAAAAAQAEAP//AAAAAAAAAQAEAAAAAAAAAAAAAQAEAAEAAAAAAAAAAQAEAAIAAAAAAAAAAQAFAP3/AAAAAAAAAQAFAP7/AAAAAAAAAQAFAP//AAAAAAAAAQAFAAAAAAAAAAAAAQAFAAEAAAAAAAAAAQAFAAIAAAAAAAAAAQAGAP3/AAAAAAAAAQAGAP7/AAAAAAAAAQAGAP//AAAAAAAAAQAGAAAAAAAAAAAAAQAGAAEAAAAAAAAAAQAGAAIAAAAAAAAAAQAHAP3/AAAAAAAAAQAHAP7/AAAAAAAAAQAHAP//AAAAAAAAAQAHAAAAAAAAAAAAAQAHAAEAAAAAAAAAAQAHAAIAAAAAAAAAAQAIAP3/AAAAAAAAAQAIAP7/AAAAAAAAAQAIAP//AAAAAAAAAQAIAAAAAAAAAAAAAQAIAAEAAAAAAAAAAQAIAAIAAAAAAAAAAQAJAP3/AAAAAAAAAQAJAP7/AAAAAAAAAQAJAP//AAAAAAAAAQAJAAAAAAAAAAAAAQAJAAEAAAAAAAAAAQAJAAIAAAAAAAAAAQAKAP3/AAAAAAAAAQAKAP7/AAAAAAAAAQAKAP//AAAAAAAAAQAKAAAAAAAAAAAAAQAKAAEAAAAAAAAAAQAKAAIAAAAAAAAAAQALAP3/AAAAAAAAAQALAP7/AAAAAAAAAQALAP//AAAAAAAAAQALAAAAAAAAAAAAAQALAAEAAAAAAAAAAQALAAIAAAAAAAAAAQAMAP3/AAAAAAAAAQAMAP7/AAAAAAAAAQAMAP//AAAAAAAAAQAMAAAAAAAAAAAAAQAMAAEAAAAAAAAAAQAMAAIAAAAAAAAAAQANAP3/AAAAAAAAAQANAP7/AAAAAAAAAQANAP//AAAAAAAAAQANAAAAAAAAAAAAAQANAAEAAAAAAAAAAQANAAIAAAAAAAAAAQAOAP3/AAAAAAAAAQAOAP7/AAAAAAAAAQAOAP//AAAAAAAAAQAOAAAAAAAAAAAAAQAOAAEAAAAAAAAAAQAOAAIAAAAAAAAAAQAPAP3/AAAAAAAAAQAPAP7/AAAAAAAAAQAPAP//AAAAAAAAAQAPAAAAAAAAAAAAAQAPAAEAAAAAAAAAAQAPAAIAAAAAAAAAAQAQAP3/AAAAAAAAAQAQAP7/AAAAAAAAAQAQAP//AAAAAAAAAQAQAAAAAAAAAAAAAQAQAAEAAAAAAAAAAQAQAAIAAAAAAAAAAQARAP3/AAAAAAAAAQARAP7/AAAAAAAAAQARAP//AAAAAAAAAQARAAAAAAAAAAAAAQARAAEAAAAAAAAAAQARAAIAAAAAAAAAAQDo//3/AAAAAAAAAQDo//7/AAAAAAAAAQDo////AAAAAAAAAQDo/wAAAAAAAAAAAQDo/wEAAAAAAAAAAQDo/wIAAAAAAAAAAQDp//3/AAAAAAAAAQDp//7/AAAAAAAAAQDp////AAAAAAAAAQDp/wAAAAAAAAAAAQDp/wEAAAAAAAAAAQDp/wIAAAAAAAAAAQDq//3/AAAAAAAAAQDq//7/AAAAAAAAAQDq////AAAAAAAAAQDq/wAAAAAAAAAAAQDq/wEAAAAAAAAAAQDq/wIAAAAAAAAAAQDr//3/AAAAAAAAAQDr//7/AAAAAAAAAQDr////AAAAAAAAAQDr/wAAAAAAAAAAAQDr/wEAAAAAAAAAAQDr/wIAAAAAAAAAAQDs//3/AAAAAAAAAQDs//7/AAAAAAAAAQDs////AAAAAAAAAQDs/wAAAAAAAAAAAQDs/wEAAAAAAAAAAQDs/wIAAAAAAAAAAQDt//3/AAAAAAAAAQDt//7/AAAAAAAAAQDt////AAAAAAAAAQDt/wAAAAAAAAAAAQDt/wEAAAAAAAAAAQDt/wIAAAAAAAAAAQDu//3/AAAAAAAAAQDu//7/AAAAAAAAAQDu////AAAAAAAAAQDu/wAAAAAAAAAAAQDu/wEAAAAAAAAAAQDu/wIAAAAAAAAAAQDv//3/AAAAAAAAAQDv//7/AAAAAAAAAQDv////AAAAAAAAAQDv/wAAAAAAAAAAAQDv/wEAAAAAAAAAAQDv/wIAAAAAAAAAAQDw//3/AAAAAAAAAQDw//7/AAAAAAAAAQDw////AAAAAAAAAQDw/wAAAAAAAAAAAQDw/wEAAAAAAAAAAQDw/wIAAAAAAAAAAQDx//3/AAAAAAAAAQDx//7/AAAAAAAAAQDx////AAAAAAAAAQDx/wAAAAAAAAAAAQDx/wEAAAAAAAAAAQDx/wIAAAAAAAAAAQDy//3/AAAAAAAAAQDy//7/AAAAAAAAAQDy////AAAAAAAAAQDy/wAAAAAAAAAAAQDy/wEAAAAAAAAAAQDy/wIAAAAAAAAAAQDz//3/AAAAAAAAAQDz//7/AAAAAAAAAQDz////AAAAAAAAAQDz/wAAAAAAAAAAAQDz/wEAAAAAAAAAAQDz/wIAAAAAAAAAAQASAP3/AAAAAAAAAQASAP7/AAAAAAAAAQASAP//AAAAAAAAAQASAAAAAAAAAAAAAQASAAEAAAAAAAAAAQASAAIAAAAAAAAAAQATAP3/AAAAAAAAAQATAP7/AAAAAAAAAQATAP//AAAAAAAAAQATAAAAAAAAAAAAAQATAAEAAAAAAAAAAQATAAIAAAAAAAAAAQAUAP3/AAAAAAAAAQAUAP7/AAAAAAAAAQAUAP//AAAAAAAAAQAUAAAAAAAAAAAAAQAUAAEAAAAAAAAAAQAUAAIAAAAAAAAAAQAVAP3/AAAAAAAAAQAVAP7/AAAAAAAAAQAVAP//AAAAAAAAAQAVAAAAAAAAAAAAAQAVAAEAAAAAAAAAAQAVAAIAAAAAAAAAAQAWAP3/AAAAAAAAAQAWAP7/AAAAAAAAAQAWAP//AAAAAAAAAQAWAAAAAAAAAAAAAQAWAAEAAAAAAAAAAQAWAAIAAAAAAAAAAQAXAP3/AAAAAAAAAQAXAP7/AAAAAAAAAQAXAP//AAAAAAAAAQAXAAAAAAAAAAAAAQAXAAEAAAAAAAAAAQAXAAIAAAAAAAAAAQDn//L/AAAAAAAAAQDn//P/AAAAAAAAAQDn//T/AAAAAAAAAQDn//X/AAAAAAAAAQDn//b/AAAAAAAAAQDn//f/AAAAAAAAAQDn//j/AAAAAAAAAQDn//n/AAAAAAAAAQDn//r/AAAAAAAAAQDn//v/AAAAAAAAAQDn//z/AAAAAAAAAQDo//L/AAAAAAAAAQDo//P/AAAAAAAAAQDo//T/AAAAAAAAAQDo//X/AAAAAAAAAQDo//b/AAAAAAAAAQDo//f/AAAAAAAAAQDo//j/AAAAAAAAAQDo//n/AAAAAAAAAQDo//r/AAAAAAAAAQDo//v/AAAAAAAAAQDo//z/AAAAAAAAAQAXAPL/AAAAAAAAAQAXAPP/AAAAAAAAAQAXAPT/AAAAAAAAAQAXAPX/AAAAAAAAAQAXAPb/AAAAAAAAAQAXAPf/AAAAAAAAAQAXAPj/AAAAAAAAAQAXAPn/AAAAAAAAAQAXAPr/AAAAAAAAAQAXAPv/AAAAAAAAAQAXAPz/AAAAAAAAAQAYAPL/AAAAAAAAAQAYAPP/AAAAAAAAAQAYAPT/AAAAAAAAAQAYAPX/AAAAAAAAAQAYAPb/AAAAAAAAAQAYAPf/AAAAAAAAAQAYAPj/AAAAAAAAAQAYAPn/AAAAAAAAAQAYAPr/AAAAAAAAAQAYAPv/AAAAAAAAAQAYAPz/AAAAAAAAAQA=")
+tile_set = SubResource("TileSet_kqjpo")
+
+[node name="BG" type="Node2D" parent="Level/TileMap/Room5" unique_id=1301056455]
+modulate = Color(0.8, 0.8, 0.8, 1)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="BG_Sprite2D" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=1757509238]
+position = Vector2(0, -248.57152)
+scale = Vector2(1.3333337, 1.3333337)
+texture = ExtResource("14_gt3je")
+offset = Vector2(0, 120)
+
+[node name="BG_Sprite2D2" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=119794059]
+position = Vector2(0, -293.45352)
+scale = Vector2(1.5113001, 1.5113001)
+texture = ExtResource("15_3pmx8")
+offset = Vector2(0, 120)
+
+[node name="BG_Sprite2D3" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=282862382]
+position = Vector2(0, -276.2975)
+scale = Vector2(1.3333337, 1.3333337)
+texture = ExtResource("16_u50mg")
+offset = Vector2(0, 120)
+
+[node name="BG_Sprite2D4" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=1231535401]
+z_index = 1000
+position = Vector2(0, -248.57152)
+scale = Vector2(1.3333337, 1.3333337)
+texture = ExtResource("17_cbgmd")
+offset = Vector2(0, 120)
+
+[node name="BG_Sprite2D5" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=1857460493]
+z_index = 1000
+position = Vector2(0, -248.57152)
+scale = Vector2(1.3333337, 1.3333337)
+texture = ExtResource("18_1w6v2")
+offset = Vector2(0, 120)
+
+[node name="BG_Sprite2D6" type="Sprite2D" parent="Level/TileMap/Room5/BG" unique_id=1255676182]
+z_index = 1000
+position = Vector2(0, -263.5176)
+scale = Vector2(1.3333337, 1.3333337)
+texture = ExtResource("19_ueoa1")
+offset = Vector2(0, 120)
+
+[node name="ClickableDoor_Node2D5" parent="Level/TileMap/Room5" unique_id=1023103175 instance=ExtResource("8_6iyac")]
+position = Vector2(-281.9048, -47.619045)
+scale = Vector2(1.0000002, 1.0000002)
+_door_id = 2
+
+[node name="ClickableDoor_Node2D6" parent="Level/TileMap/Room5" unique_id=401276077 instance=ExtResource("8_6iyac")]
+position = Vector2(80, -47.619045)
+scale = Vector2(1.0000002, 1.0000002)
 _door_id = 3
+
+[node name="Clickable_Box2" parent="Level/TileMap/Room5" unique_id=1302423993 instance=ExtResource("10_hptm8")]
+position = Vector2(-134.7619, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box3" parent="Level/TileMap/Room5" unique_id=1927946446 instance=ExtResource("10_hptm8")]
+position = Vector2(-110.00001, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box4" parent="Level/TileMap/Room5" unique_id=1377078547 instance=ExtResource("10_hptm8")]
+position = Vector2(-84.76191, -56.190475)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box5" parent="Level/TileMap/Room5" unique_id=1230516610 instance=ExtResource("10_hptm8")]
+position = Vector2(-99.52382, -71.90476)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box6" parent="Level/TileMap/Room5" unique_id=639675166 instance=ExtResource("10_hptm8")]
+position = Vector2(-124.76191, -71.90476)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Clickable_Box7" parent="Level/TileMap/Room5" unique_id=525381995 instance=ExtResource("10_hptm8")]
+position = Vector2(-112.38096, -87.14285)
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Win_Label" type="Label" parent="Level" unique_id=504230731]
 process_mode = 3

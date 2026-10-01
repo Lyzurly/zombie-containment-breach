@@ -5,31 +5,53 @@
 [ext_resource type="Texture2D" uid="uid://cj1hkh5cih5bn" path="res://Images/player-sprites/v2/Walk_1.png" id="2_8erm5"]
 [ext_resource type="Texture2D" uid="uid://ccvj7u70ful8g" path="res://Images/player-sprites/v2/Idle_1.png" id="2_gymyn"]
 [ext_resource type="Texture2D" uid="uid://23wdem7esxbf" path="res://Images/player-sprites/v2/Walk_2.png" id="3_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://cmdnwilj76abx" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_0.png" id="3_pg0gw"]
 [ext_resource type="Texture2D" uid="uid://gtjqlflhulsg" path="res://Images/player-sprites/v2/Idle_2.png" id="3_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://dr2osfn7vxtfe" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_1.png" id="4_qavoy"]
 [ext_resource type="Texture2D" uid="uid://j6up30ioecvl" path="res://Images/player-sprites/v2/Walk_3.png" id="4_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://bc03nivg2fiwv" path="res://Images/player-sprites/v2/Idle_3.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://copc06vlttu7a" path="res://Images/player-sprites/v2/Idle_4.png" id="5_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://cr04i72j2pou2" path="res://Images/player-sprites/v2/Walk_4.png" id="5_gymyn"]
+[ext_resource type="Texture2D" uid="uid://balcbi47w68r4" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_2.png" id="5_w4w4b"]
+[ext_resource type="Texture2D" uid="uid://bjaoltu0n82kq" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_3.png" id="6_h5cax"]
 [ext_resource type="Texture2D" uid="uid://k68wytdqimu0" path="res://Images/player-sprites/v2/Walk_5.png" id="6_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://cj10ywgbek7gj" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_0.png" id="6_pukcj"]
 [ext_resource type="Texture2D" uid="uid://coj55koqyy6en" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_1.png" id="7_1htnp"]
+[ext_resource type="Texture2D" uid="uid://ctj0t8gs75512" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_4.png" id="7_dj0x0"]
 [ext_resource type="Texture2D" uid="uid://ctben2k2tr63q" path="res://Images/player-sprites/v2/Walk_6.png" id="7_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://c4uaugs4sd361" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_5.png" id="8_f1uaf"]
 [ext_resource type="Texture2D" uid="uid://djgfwgk4gy72g" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_2.png" id="8_m376e"]
 [ext_resource type="Texture2D" uid="uid://beapdadhi4mcf" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_3.png" id="9_6b312"]
+[ext_resource type="Texture2D" uid="uid://ctr55eiotei8m" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_6.png" id="9_6hq81"]
+[ext_resource type="Texture2D" uid="uid://bdwoge3flbuw1" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_7.png" id="10_5cld6"]
 [ext_resource type="Texture2D" uid="uid://dmlrlajkjb1xv" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_4.png" id="10_lisdf"]
 [ext_resource type="Texture2D" uid="uid://brxbuxy0yumfr" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_5.png" id="11_n1x1j"]
+[ext_resource type="Texture2D" uid="uid://bkffmv15v3ont" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_8.png" id="11_o736f"]
 [ext_resource type="Texture2D" uid="uid://es6ynvrwggup" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_6.png" id="12_c8b32"]
+[ext_resource type="Texture2D" uid="uid://bni65qn13unk5" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_9.png" id="12_ketbw"]
+[ext_resource type="Texture2D" uid="uid://bfwoaogqqckht" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_10.png" id="13_4grkl"]
 [ext_resource type="Texture2D" uid="uid://bckto10w3pcbv" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_7.png" id="13_nj1g2"]
+[ext_resource type="Texture2D" uid="uid://bx3xewi1dteqa" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_11.png" id="14_6yrdb"]
 [ext_resource type="Texture2D" uid="uid://ms7cuj0mk5vl" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_8.png" id="14_usbl8"]
 [ext_resource type="Texture2D" uid="uid://bl6g7m3uefj02" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_9.png" id="15_dtg1u"]
+[ext_resource type="Texture2D" uid="uid://bgjk1krgod0q0" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_12.png" id="15_ue0p1"]
+[ext_resource type="Texture2D" uid="uid://61xsa85flty6" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_13.png" id="16_isbcs"]
 [ext_resource type="Texture2D" uid="uid://cg1bmpthljvdd" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_10.png" id="16_nuaet"]
+[ext_resource type="Texture2D" uid="uid://btgc15163wyp3" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_14.png" id="17_142e3"]
 [ext_resource type="Texture2D" uid="uid://bm25e2wrieiwh" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_11.png" id="17_bqbau"]
 [ext_resource type="Texture2D" uid="uid://dxu0axo6yo4dj" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_12.png" id="18_f5f5t"]
+[ext_resource type="Texture2D" uid="uid://cj58wxaa3it31" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_15.png" id="18_ts2c8"]
+[ext_resource type="Texture2D" uid="uid://bfg7cjmw62uod" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_16.png" id="19_hcgbs"]
 [ext_resource type="Texture2D" uid="uid://3svmjhdyjlsk" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_13.png" id="19_qvbpb"]
+[ext_resource type="Texture2D" uid="uid://bv5l1e4whrmr1" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_17.png" id="20_mpfyg"]
 [ext_resource type="Texture2D" uid="uid://b51l7gddr7cmb" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_14.png" id="20_sscpr"]
 [ext_resource type="Texture2D" uid="uid://roj7blw6ef11" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_15.png" id="21_by7i4"]
+[ext_resource type="Texture2D" uid="uid://cpg3vr38h7oqq" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_18.png" id="21_un823"]
 [ext_resource type="Texture2D" uid="uid://2iiib6h5e7sk" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_16.png" id="22_3uvy8"]
+[ext_resource type="Texture2D" uid="uid://wifg45pkfpg0" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_19.png" id="22_aclic"]
+[ext_resource type="Texture2D" uid="uid://negv65dcu8l2" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_20.png" id="23_0y64g"]
 [ext_resource type="Texture2D" uid="uid://b4aitj4c2qe5m" path="res://Images/player-sprites/robot/Idle/skeleton-Idle_17.png" id="23_ss172"]
+[ext_resource type="Texture2D" uid="uid://deo8juu208yos" path="res://Images/player-sprites/robot/Attack/skeleton-Attack_21.png" id="24_ramv3"]
 [ext_resource type="Texture2D" uid="uid://hnuq0s2eqkts" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_0.png" id="30_jmelf"]
 [ext_resource type="Texture2D" uid="uid://d2p3vj3wccwo1" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_1.png" id="31_bjdqd"]
 [ext_resource type="Texture2D" uid="uid://2awk0r6uf0m7" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_2.png" id="32_feq18"]
@@ -56,22 +78,28 @@
 [ext_resource type="Texture2D" uid="uid://db16hu1kdqct2" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_23.png" id="53_un823"]
 [ext_resource type="Texture2D" uid="uid://ceqljrxtx73nt" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_24.png" id="54_aclic"]
 [ext_resource type="Texture2D" uid="uid://e35advngxoj8" path="res://Images/player-sprites/robot/Walk/skeleton-Walk_25.png" id="55_0y64g"]
+[ext_resource type="Texture2D" uid="uid://cys4tsf42rne2" path="res://Images/backgrounds/ending/orig.png" id="79_6hq81"]
+[ext_resource type="Texture2D" uid="uid://biahe0y7lx0t" path="res://Images/monster-sprites/v2/Happy/Hurt_1.png" id="80_5cld6"]
+[ext_resource type="Texture2D" uid="uid://c5v4sbydqpplu" path="res://Images/monster-sprites/v2/Happy/Hurt_2.png" id="81_o736f"]
+[ext_resource type="Texture2D" uid="uid://x3y0gy3iwst0" path="res://Images/monster-sprites/v2/Happy/Hurt_3.png" id="82_ketbw"]
+[ext_resource type="Texture2D" uid="uid://cxrnd61fow7p1" path="res://Images/monster-sprites/v2/Happy/Hurt_5.png" id="83_4grkl"]
+[ext_resource type="Texture2D" uid="uid://dykixb2u0bpr2" path="res://Images/backgrounds/ending/4.png" id="84_6yrdb"]
 
-[sub_resource type="Gradient" id="Gradient_1htnp"]
+[sub_resource type="Gradient" id="Gradient_hseb1"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_y7hum"]
-gradient = SubResource("Gradient_1htnp")
+gradient = SubResource("Gradient_hseb1")
 width = 1920
 height = 1080
 
-[sub_resource type="Gradient" id="Gradient_pukcj"]
+[sub_resource type="Gradient" id="Gradient_vinow"]
 offsets = PackedFloat32Array(0.1880734, 0.51834863, 0.8165138)
 colors = PackedColorArray(0, 0, 0, 0, 1, 0.9483333, 0.69, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kqjpo"]
-gradient = SubResource("Gradient_pukcj")
+gradient = SubResource("Gradient_vinow")
 height = 340
 fill_from = Vector2(0.24973291, 0.94017094)
 fill_to = Vector2(0.74919873, 0)
@@ -116,6 +144,77 @@ _data = {
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqjpo"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pg0gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qavoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w4w4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h5cax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dj0x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f1uaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6hq81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5cld6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o736f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ketbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4grkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6yrdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ue0p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_isbcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_142e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ts2c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hcgbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mpfyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_un823")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_aclic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0y64g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ramv3")
+}],
+"loop": 1,
+"name": &"attack_robot",
+"speed": 50.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_gymyn")
@@ -190,7 +289,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle_robot",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -296,11 +395,31 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_robot",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ks7b"]
 size = Vector2(26, 69)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ue0p1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_5cld6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_o736f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ketbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_4grkl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Player" type="Node2D" unique_id=502544076]
 metadata/_edit_vertical_guides_ = [-185.0]
@@ -355,7 +474,8 @@ unique_name_in_owner = true
 position = Vector2(-1.486, 5.272)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_kqjpo")
-animation = &"walk_robot"
+animation = &"attack_robot"
+frame_progress = 0.7638068
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1108627336]
 position = Vector2(-2, 30)
@@ -371,3 +491,47 @@ offset_bottom = -168.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 32
 text = "DEBUG"
+
+[node name="Ending_Node2D" type="Node2D" parent="." unique_id=1364386739]
+unique_name_in_owner = true
+visible = false
+z_index = 4000
+position = Vector2(255, 80)
+scale = Vector2(0.842, 0.842)
+
+[node name="Label" type="Label" parent="Ending_Node2D" unique_id=1448798269]
+z_index = 4000
+offset_left = -273.0
+offset_top = -503.0
+offset_right = 478.0
+offset_bottom = -370.0
+theme_override_colors/font_shadow_color = Color(0.39607844, 0.7294118, 0.8901961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = -3
+theme_override_constants/shadow_outline_size = 16
+theme_override_font_sizes/font_size = 97
+text = "Congratulations"
+
+[node name="Sprite2D" type="Sprite2D" parent="Ending_Node2D" unique_id=1039606469]
+position = Vector2(0, -221)
+scale = Vector2(1.796, 1.796)
+texture = ExtResource("79_6hq81")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Ending_Node2D" unique_id=632883510]
+position = Vector2(-111.24701, -209.57703)
+scale = Vector2(0.682, 0.682)
+texture = ExtResource("6_pukcj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ending_Node2D" unique_id=936412507]
+position = Vector2(-212.24701, -157.57703)
+scale = Vector2(0.504, 0.504)
+sprite_frames = SubResource("SpriteFrames_ue0p1")
+autoplay = "default"
+frame_progress = 0.0046687415
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ending_Node2D" unique_id=1791805282]
+position = Vector2(0, -221)
+scale = Vector2(1.796, 1.796)
+texture = ExtResource("84_6yrdb")

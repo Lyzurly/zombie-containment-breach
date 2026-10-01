@@ -11,6 +11,8 @@ func _init() -> void:
 var _idle_animation: String = "idle"
 var _walk_animation: String = "walk"
 
+var _movement_override:bool = false
+
 var _flip_flip:bool = false
 
 var _holding: Clickable.HOLDABLES = Clickable.HOLDABLES.NOTHING
@@ -78,7 +80,8 @@ func _change_move_state(to:MOVE_STATES) -> void:
 
 func _physics_process(delta: float) -> void:
 	_physics_process_mouse()
-	_physics_process_moving(delta)
+	if not _movement_override:
+		_physics_process_moving(delta)
 
 func _physics_process_mouse() -> void:
 	#print("Mouse pos: ",get_global_mouse_position(),
@@ -106,9 +109,9 @@ func _physics_process_moving(delta: float) ->  void:
 		SPEED = 100.
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		SPEED = 75.
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
+		#SPEED = 75.
 
 	var direction: float = 0.
 
@@ -187,13 +190,27 @@ func _on_reset_room(_which_room:Level_Room) -> void:
 	set_collision_layer_value(3,true)
 
 func _on_collected_all_parts() -> void:
+	Manage_RobotParts.ref.set_all_parts_collected()
 	_flip_flip = true
 	_idle_animation = "idle_robot"
 	_walk_animation = "walk_robot"
 	Manage_HUD.ref.hide_hud()
-	z_on_top(true)
+	_z_on_top(true)
 	_celebration.celebrate()
 
-func z_on_top(indeed:bool) -> void:
+func end_celebration() -> void:
+	_z_on_top(false)
+	Manage_Room.ref.spawn_monster()
+
+func _z_on_top(indeed:bool) -> void:
 	z_index = \
 		4096 if indeed else 0
+
+func defeat_monster() -> void:
+	_sprite.play("attack_robot")
+
+func end_game() -> void:
+	%Ending_Node2D.show()
+	
+func override_movement(indeed:bool) -> void:
+	_movement_override = indeed

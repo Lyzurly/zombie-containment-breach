@@ -98,6 +98,7 @@ animations = [{
 
 [node name="Walk_Target_Node2D" type="Node2D" unique_id=2011052718]
 visible = false
+z_index = 3999
 script = ExtResource("1_t7skm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=186000438]

@@ -6,7 +6,7 @@ func _init() -> void:
 signal collected_part(which_part:Player_RobotPart.PARTS)
 signal collected_all_parts()
 	
-	
+var _all_parts_collected: bool = false
 var _spawners: Array[Clickable] = []
 var _collected_parts: Array[Player_RobotPart.PARTS] = []
 
@@ -15,15 +15,33 @@ func _ready() -> void:
 
 func _ready_spawners() -> void:
 	var spawners: Array[Clickable] = []
+	var cheesed_spawners: Array[Clickable] = []
 	spawners.assign(_spawners)
+	for spawner in spawners:
+		if spawner.name == "Clickable_Box18":
+			cheesed_spawners.append(spawner)
+			spawners.erase(spawner)
+			break
+	for spawner in spawners:
+		if spawner.name == "Clickable_Box19":
+			cheesed_spawners.append(spawner)
+			spawners.erase(spawner)
+			break
 	spawners.shuffle()
+	for cheesed_spawner in cheesed_spawners:
+		spawners.push_front(cheesed_spawner)
 	spawners.resize(5)
 	_spawners.assign(spawners)
 	print("LOGGING SPAWNERS:\n\t",_spawners)
 
-func log_spawner(which:Clickable) -> void:
+func init_log_spawner(which:Clickable) -> void:
 	print("LOGGING SPAWNER:\n\t",which)
 	_spawners.append(which)
+	
+func set_all_parts_collected () -> void:
+	_all_parts_collected = true
+func all_parts_are_collected() -> bool:
+	return _all_parts_collected
 
 func collect_a_part(who_collected:Clickable) -> void:
 	if not _spawners.has(who_collected):

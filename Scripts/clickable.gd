@@ -18,7 +18,7 @@ var _unclickable: bool = false
 
 func _init() -> void:
 	if _can_spawn_robot_part():
-		Manage_RobotParts.ref.log_spawner(self)
+		Manage_RobotParts.ref.init_log_spawner(self)
 func _ready() -> void:
 	Cursor.ref.clickable_hovered.connect(_on_clickable_hovered)
 	Cursor.ref.cursor_completed_action.connect(_on_cursor_completed_action)
