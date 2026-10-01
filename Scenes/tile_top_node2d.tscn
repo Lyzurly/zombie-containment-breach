@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7ae2lb3ppud4"]
 
-[ext_resource type="Texture2D" uid="uid://b86j1y6kjdfdk" path="res://Images/craftpix-net-314143-free-industrial-zone-tileset-pixel-art/1 Tiles/IndustrialTile_32.png" id="1_mr6ps"]
+[ext_resource type="Texture2D" uid="uid://b86j1y6kjdfdk" path="res://Images/IndustrialTile_32.png" id="1_mr6ps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqjpo"]
 size = Vector2(16, 16)

@@ -18,6 +18,7 @@ height = 15
 script = ExtResource("1_xshpr")
 
 [node name="Closed_Sprite2D" type="Sprite2D" parent="." unique_id=1260617751]
+z_index = 2000
 texture = SubResource("CompressedTexture2D_1fuda")
 offset = Vector2(0, -7.806)
 

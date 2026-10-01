@@ -7,12 +7,13 @@ var _has_a_monster: bool = false
 var _monster_likelihood_floor: float = -1.
 
 func _ready() -> void:
+	print("ROOM ",self," is ready!")
 	if name == "Room1":
 		_ready_first_room()
 	Manage_Room.ref.reset_room.connect(_on_reset_room)
 
 func _ready_first_room() -> void:
-	print("ROOM READY")
+	print("FIRST ROOM (",self,") IS READY")
 	_active = true
 	Manage_Room.ref.set_first_last_room(self)
 	

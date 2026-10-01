@@ -37,6 +37,10 @@ func _on_door_opened(door: Door, id:int) -> void:
 	print(self,"checked for doorage")
 	if _door_id == id and not door == self:
 		var parent: Variant = get_parent()
+		print(
+			self," with id ",_door_id,
+			" matches match with ", door," with id ",id
+		)
 		print("DOOR PARENT IS ",parent)
 		if parent is Level_Room:
 			Manage_Room.ref.change_room(door,parent,true)
@@ -44,8 +48,10 @@ func _on_door_opened(door: Door, id:int) -> void:
 			
 	#else:
 		#push_error(
-			#"WHOOPSIE COULDN'T FIND A VALID DOOR TARGET"
+			#self," with id ",_door_id,
+			#" does not match with ", door," with id ",id
 		#)
 
 func _on_collected_all_parts() -> void:
-	make_unclickable()
+	#make_unclickable()
+	pass
